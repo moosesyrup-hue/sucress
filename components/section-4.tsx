@@ -1,12 +1,22 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+const viewport = { once: true, margin: "0px 0px -60px 0px" };
 
 export default function Section4() {
   return (
-    <section className="w-full bg-[#fdf9f5] px-5 md:px-10 lg:px-[190px] py-16 md:py-24">
+    <section className="w-full bg-[#fdf9f5] px-5 md:px-10 lg:px-20 py-20 md:py-28">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-12 md:gap-16">
-        {/* Headline */}
-        <h2 className="font-semibold text-center tracking-tight leading-tight max-w-[848px] text-2xl md:text-4xl lg:text-[54px]">
+
+        <motion.h2
+          className="font-semibold text-center tracking-[-0.03em] leading-tight max-w-[900px] text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px]"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewport}
+          transition={{ duration: 0.7, ease }}
+        >
           <span className="text-[#7dc45e]">Sweet Success.</span>
           <br />
           <span className="text-[#00723c]">
@@ -14,45 +24,79 @@ export default function Section4() {
             <em className="font-normal italic">Sucress</em> into a perfect
             sweetener!
           </span>
-        </h2>
+        </motion.h2>
 
-        {/* Image */}
-        <div className="relative w-full aspect-[1064/475] rounded-2xl overflow-hidden">
+        <motion.div
+          className="relative w-full aspect-[1064/475] rounded-2xl overflow-hidden"
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={viewport}
+          transition={{ duration: 0.75, ease }}
+        >
           <Image
             src="/images/section4.jpg"
-            alt="Glycine amino acid — the secret behind Sucress"
+            alt="Glycine and stevia — the two ingredients behind Sucress"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 80vw"
           />
-        </div>
+        </motion.div>
 
-        {/* Copy block */}
-        <div className="flex flex-col items-center gap-10 md:gap-12 max-w-[780px] text-center">
-          {/* Sucre + Success equation */}
-          <div className="flex items-center gap-3 md:gap-4 flex-wrap justify-center">
-            <p className="font-bold text-[#00723c] text-2xl md:text-3xl lg:text-[40px] tracking-tight">
+        <div className="flex flex-col items-center gap-8 md:gap-10 max-w-[680px] text-center w-full">
+
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-2 md:gap-3"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewport}
+            transition={{ duration: 0.7, ease }}
+          >
+            <p className="font-bold text-[#00723c] text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] tracking-tight whitespace-nowrap">
               Sucre + Success =
             </p>
-            <div className="relative h-12 md:h-14 w-[110px] md:w-[130px]">
+            <div className="relative h-[72px] sm:h-[85px] md:h-[98px] w-[188px] sm:w-[231px] md:w-[275px]">
               <Image
-                src="/images/logo.png"
+                src="/images/sucress-wordmark.png"
                 alt="Sucress"
                 fill
-                className="object-contain"
+                sizes="176px"
+                className="object-contain object-left"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <p className="font-normal text-[#00723c] text-base md:text-lg lg:text-xl leading-relaxed">
+          <motion.p
+            className="font-normal text-[#00723c] text-[16px] md:text-[18px] lg:text-[20px] leading-relaxed opacity-85"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewport}
+            transition={{ duration: 0.7, ease }}
+          >
             Sucre is the French word for sugar and if you combine it with the
             word success, you end up with{" "}
             <strong className="font-bold">Sucress</strong>!
-          </p>
+          </motion.p>
 
-          <div className="w-full h-px bg-[#00723c]/20" />
+          {/* Divider — no animation wrapper so fill Image works correctly */}
+          <div className="relative w-full h-px opacity-30">
+            <Image
+              src="/images/divider.svg"
+              alt=""
+              fill
+              unoptimized
+              sizes="100vw"
+              className="object-fill"
+              aria-hidden="true"
+            />
+          </div>
 
-          <p className="font-normal text-[#00723c] text-base md:text-lg lg:text-xl leading-relaxed tracking-tight">
+          <motion.p
+            className="font-normal text-[#00723c] text-[16px] md:text-[18px] lg:text-[20px] leading-relaxed opacity-85"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewport}
+            transition={{ duration: 0.7, ease }}
+          >
             The perfectly balanced sweetness of{" "}
             <strong className="font-semibold">Sucress</strong> starts with
             glycine — Mother Nature&apos;s sweetest amino acid. Glycine is a
@@ -62,37 +106,32 @@ export default function Section4() {
             most perfect natural sweetener. We then add just a trace of our most
             concentrated stevia leaf extract to create nature&apos;s most
             delicious, healthy and unique natural sweetener and sugar substitute.
-          </p>
+          </motion.p>
 
-          {/* Comparison screenshot */}
-          <div className="relative w-full max-w-[751px] aspect-[751/476] rounded-2xl overflow-hidden shadow-md">
-            <Image
-              src="/images/section4-comparison.png"
-              alt="Sucress ingredient comparison chart versus other sugar substitutes"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 60vw"
-            />
-          </div>
-
-          {/* CTA */}
-          <Link
+          <motion.a
             href="#free-offer"
-            className="inline-flex items-center justify-center h-14 px-10 bg-[#97e674] rounded-full text-[#064326] font-semibold text-base md:text-lg hover:bg-[#7dc45e] transition-colors duration-200 shadow-sm"
+            className="inline-flex items-center justify-center h-14 px-10 bg-[#97e674] rounded-full text-[#064326] font-semibold text-[15px] md:text-[17px] hover:bg-[#7dc45e] transition-colors duration-200"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewport}
+            transition={{ duration: 0.6, ease, delay: 0.1 }}
           >
-            Get a FREE Month Supply of Sucress!
-          </Link>
+            Get a FREE 2-Week Supply of Sucress!
+          </motion.a>
 
-          {/* Fine print */}
-          <p className="text-[#00723c] text-base md:text-lg leading-relaxed">
-            <strong className="font-bold">Free shipping.</strong>
+          <motion.p
+            className="text-[#00723c] text-[15px] md:text-[17px] leading-relaxed font-semibold"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewport}
+            transition={{ duration: 0.6, ease, delay: 0.15 }}
+          >
+            Free shipping. No credit card required.
             <br />
-            <strong className="font-bold">No credit card required.</strong>
-            <br />
-            <span className="font-normal text-sm md:text-base opacity-75">
+            <span className="font-normal text-[13px] md:text-[14px] opacity-50">
               Limit one per household.
             </span>
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>
