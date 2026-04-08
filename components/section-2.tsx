@@ -85,6 +85,9 @@ export default function Section2() {
                   <strong className="font-semibold">— Andrew Lessman,</strong>{" "}
                   <span className="font-normal opacity-80">ProCaps Founder</span>
                 </p>
+                <p className="text-white/50 text-[10px] sm:text-[11px] tracking-[0.06em] uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+                  ProCaps Laboratories · Trusted for over 40 years
+                </p>
               </div>
             </button>
           </Animate>

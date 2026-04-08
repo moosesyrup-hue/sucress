@@ -108,6 +108,24 @@ export default function FreeOfferForm() {
                 ))}
               </ul>
 
+              {/* ProCaps inline trust bar */}
+              <div className="flex items-center gap-3.5">
+                <div className="relative h-[26px] w-[92px] opacity-75 shrink-0">
+                  <Image
+                    src="/images/procaps-logo.svg"
+                    alt="ProCaps Laboratories"
+                    fill
+                    unoptimized
+                    sizes="92px"
+                    className="object-contain brightness-0 invert"
+                  />
+                </div>
+                <div className="w-px h-4 bg-white/25 shrink-0" />
+                <p className="text-white/60 text-[12px] leading-snug">
+                  The supplement brand trusted for over 45 years.
+                </p>
+              </div>
+
               {/* Image — flex-1 + min-h-0 fills remaining column height exactly */}
               <motion.div
                 className="relative flex-1 min-h-0 rounded-2xl overflow-hidden"

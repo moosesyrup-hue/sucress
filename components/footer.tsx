@@ -70,12 +70,35 @@ export default function Footer() {
           This product is not intended to diagnose, treat, cure, or prevent any disease.
         </motion.p>
 
+        <motion.div
+          className="flex items-center gap-3"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={viewport}
+          transition={{ duration: 0.6, ease, delay: 0.15 }}
+        >
+          <div className="relative h-[18px] w-[64px] opacity-45 shrink-0">
+            <Image
+              src="/images/procaps-logo.svg"
+              alt="ProCaps Laboratories"
+              fill
+              unoptimized
+              sizes="64px"
+              className="object-contain brightness-0 invert"
+            />
+          </div>
+          <div className="w-px h-3.5 bg-white/20 shrink-0" />
+          <p className="text-white/35 text-[11px] leading-snug">
+            The supplement brand trusted for over 45 years.
+          </p>
+        </motion.div>
+
         <motion.p
           className="text-[#00723c]/35 text-xs"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={viewport}
-          transition={{ duration: 0.6, ease, delay: 0.15 }}
+          transition={{ duration: 0.6, ease, delay: 0.18 }}
         >
           © {new Date().getFullYear()} Sucress. All rights reserved.
         </motion.p>
