@@ -67,7 +67,7 @@ export default function Footer() {
           viewport={viewport}
           transition={{ duration: 0.65, ease, delay: 0.13 }}
         >
-          <div className="relative h-[55px] w-[110px] md:h-[65px] md:w-[130px]">
+          <div className="relative h-[66px] w-[132px] md:h-[78px] md:w-[156px]">
             <Image
               src="/images/procaps-logo-full.svg"
               alt="Andrew Lessman — ProCaps Laboratories"
