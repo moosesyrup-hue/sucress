@@ -16,7 +16,7 @@ const NAV_LINKS = [
 export default function Footer() {
   return (
     <footer className="w-full bg-[#00723c]">
-      <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 py-12 md:py-16 flex flex-col items-center gap-7">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 py-8 md:py-10 flex flex-col items-center gap-5">
 
         <motion.div
           className="relative h-10 w-[110px] md:h-12 md:w-[130px]"
