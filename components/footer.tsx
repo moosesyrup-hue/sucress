@@ -15,23 +15,10 @@ const NAV_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="w-full relative overflow-hidden" style={{ background: "linear-gradient(180deg, #00723c 0%, #005a30 100%)" }}>
+    <footer className="w-full bg-[#00723c] relative overflow-hidden">
 
-      {/* Radial spotlight from top center */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 90% 55% at 50% -5%, rgba(151,230,116,0.14) 0%, transparent 65%)" }}
-        aria-hidden="true"
-      />
 
-      {/* Noise texture overlay for depth */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundSize: "200px 200px" }}
-        aria-hidden="true"
-      />
-
-      <div className="relative max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 pt-24 md:pt-32 pb-0 flex flex-col items-center">
+      <div className="relative max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 pt-12 md:pt-16 pb-0 flex flex-col items-center">
 
         {/* ── Headline ── */}
         <motion.h2
