@@ -126,10 +126,10 @@ export default function FreeOfferForm() {
                 </p>
               </div>
 
-              {/* Image — flex-1 + min-h-0 fills remaining column height exactly */}
+              {/* Image — hidden on mobile (image already appears in hero cards above) */}
               <motion.div
-                className="relative flex-1 min-h-0 rounded-2xl overflow-hidden"
-                style={{ minHeight: "200px" }}
+                className="relative hidden lg:block flex-1 min-h-0 rounded-2xl overflow-hidden"
+                style={{ minHeight: "260px" }}
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewport}
@@ -139,10 +139,9 @@ export default function FreeOfferForm() {
                   src="/images/hero-center-coffee.png"
                   alt="Hand pouring Sucress into a green coffee cup"
                   fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 38vw"
+                  className="object-cover object-top"
+                  sizes="38vw"
                 />
-                {/* Subtle bottom vignette for polish */}
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{ background: "linear-gradient(to top, rgba(0,114,60,0.18) 0%, transparent 40%)" }}
@@ -204,33 +203,35 @@ export default function FreeOfferForm() {
                   </div>
 
                   {/* City / State / ZIP */}
-                  <div className="grid grid-cols-5 gap-3">
-                    <div className="col-span-2 flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-1.5">
                       <label htmlFor="city" className={labelClass}>City</label>
                       <input id="city" name="city" type="text" required value={form.city} onChange={handleChange} placeholder="Las Vegas" className={inputClass} />
                     </div>
-                    <div className="col-span-2 flex flex-col gap-1.5">
-                      <label htmlFor="state" className={labelClass}>State</label>
-                      <div className="relative">
-                        <select
-                          id="state" name="state" required value={form.state} onChange={handleChange}
-                          className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none"
-                        >
-                          <option value="" disabled>State</option>
-                          {US_STATES.map(([abbr, name]) => (
-                            <option key={abbr} value={abbr}>{abbr} — {name}</option>
-                          ))}
-                        </select>
-                        <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-                          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
-                            <path d="M1 1L7 7L13 1" stroke="#00723c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
+                    <div className="grid grid-cols-3 gap-3">
+                      <div className="col-span-2 flex flex-col gap-1.5">
+                        <label htmlFor="state" className={labelClass}>State</label>
+                        <div className="relative">
+                          <select
+                            id="state" name="state" required value={form.state} onChange={handleChange}
+                            className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none"
+                          >
+                            <option value="" disabled>State</option>
+                            {US_STATES.map(([abbr, name]) => (
+                              <option key={abbr} value={abbr}>{abbr} — {name}</option>
+                            ))}
+                          </select>
+                          <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+                              <path d="M1 1L7 7L13 1" stroke="#00723c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="col-span-1 flex flex-col gap-1.5">
-                      <label htmlFor="zip" className={labelClass}>ZIP</label>
-                      <input id="zip" name="zip" type="text" required inputMode="numeric" pattern="[0-9]{5}" value={form.zip} onChange={handleChange} placeholder="89101" className={inputClass} />
+                      <div className="col-span-1 flex flex-col gap-1.5">
+                        <label htmlFor="zip" className={labelClass}>ZIP</label>
+                        <input id="zip" name="zip" type="text" required inputMode="numeric" pattern="[0-9]{5}" value={form.zip} onChange={handleChange} placeholder="89101" className={inputClass} />
+                      </div>
                     </div>
                   </div>
 
@@ -273,31 +274,43 @@ export default function FreeOfferForm() {
                     <span className="text-[#00723c]/40 text-[11px] uppercase tracking-wider font-medium whitespace-nowrap">or reach us directly</span>
                     <div className="flex-1 h-px bg-[#00723c]/8" />
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2.5">
-                    <a
-                      href="tel:18008001200"
-                      className="flex-1 flex items-center justify-center gap-2 h-11 px-4 rounded-full border-2 border-[#00723c]/15 text-[#00723c] font-semibold text-sm hover:border-[#00723c]/35 hover:bg-[#effae9] transition-all duration-150"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-                        <path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="currentColor"/>
+
+                  {/* Phone — primary action, full width */}
+                  <a
+                    href="tel:18008001200"
+                    className="flex items-center gap-3.5 h-14 px-5 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150"
+                  >
+                    <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                        <path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/>
                       </svg>
-                      1-800-800-1200
-                    </a>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (typeof window !== "undefined" && (window as any).Intercom) {
-                          (window as any).Intercom("show");
-                        }
-                      }}
-                      className="flex-1 flex items-center justify-center gap-2 h-11 px-4 rounded-full border-2 border-[#00723c]/15 text-[#00723c] font-semibold text-sm hover:border-[#00723c]/35 hover:bg-[#effae9] transition-all duration-150"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-                        <path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="currentColor"/>
+                    </span>
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-[14px] leading-tight">Call to Order</span>
+                      <span className="text-[#00723c]/60 text-[12px] tracking-tight">1-800-800-1200</span>
+                    </div>
+                  </a>
+
+                  {/* Live chat — secondary, outlined */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (typeof window !== "undefined" && (window as any).Intercom) {
+                        (window as any).Intercom("show");
+                      }
+                    }}
+                    className="flex items-center gap-3.5 h-14 px-5 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150 w-full"
+                  >
+                    <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
+                      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                        <path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="#00723c"/>
                       </svg>
-                      Live Chat
-                    </button>
-                  </div>
+                    </span>
+                    <div className="flex flex-col items-start">
+                      <span className="font-semibold text-[14px] leading-tight">Live Chat</span>
+                      <span className="text-[#00723c]/50 text-[12px] tracking-tight">Typically replies instantly</span>
+                    </div>
+                  </button>
 
                   <p className="text-center text-[#00723c]/40 text-xs leading-relaxed">
                     By submitting, you agree to our{" "}

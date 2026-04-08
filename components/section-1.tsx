@@ -7,7 +7,7 @@ const viewport = { once: true, margin: "0px 0px -60px 0px" };
 
 export default function Section1() {
   return (
-    <section className="w-full px-5 md:px-10 lg:px-20 pb-20 md:pb-28">
+    <section className="w-full px-5 md:px-10 lg:px-20 pb-12 md:pb-20 lg:pb-28">
       <div className="max-w-[1440px] mx-auto">
         <div className="bg-[#effae9] rounded-3xl px-6 sm:px-10 md:px-16 lg:px-20 xl:px-28 py-16 md:py-24 flex flex-col items-center gap-12 md:gap-16">
 

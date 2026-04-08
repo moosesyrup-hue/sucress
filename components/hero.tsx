@@ -5,7 +5,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="w-full px-5 md:px-10 lg:px-20 pt-16 sm:pt-20 md:pt-24 pb-10 lg:pb-20 text-center">
+    <section className="w-full px-5 md:px-10 lg:px-20 pt-10 sm:pt-16 md:pt-24 pb-8 md:pb-14 lg:pb-20 text-center">
       <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-7 md:gap-9">
         <div className="flex flex-col gap-4 md:gap-5">
           <motion.h1
@@ -21,7 +21,7 @@ export default function Hero() {
             sugar-free.
           </motion.h1>
           <motion.p
-            className="font-medium text-[#00723c] text-[15px] sm:text-[17px] md:text-[20px] lg:text-[22px] tracking-tight opacity-75"
+            className="font-medium text-[#00723c] text-[13px] sm:text-[15px] md:text-[20px] lg:text-[22px] tracking-tight opacity-75"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.3 }}

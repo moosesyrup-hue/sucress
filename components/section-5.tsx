@@ -31,7 +31,7 @@ function CheckIcon({ filled }: { filled: boolean }) {
 
 export default function Section5() {
   return (
-    <section className="w-full px-5 md:px-10 lg:px-20 py-20 md:py-28">
+    <section className="w-full px-5 md:px-10 lg:px-20 py-12 md:py-20 lg:py-28">
       <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-12 md:gap-16">
 
         <motion.h2

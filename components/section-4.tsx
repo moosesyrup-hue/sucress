@@ -7,7 +7,7 @@ const viewport = { once: true, margin: "0px 0px -60px 0px" };
 
 export default function Section4() {
   return (
-    <section className="w-full bg-[#fdf9f5] px-5 md:px-10 lg:px-20 py-20 md:py-28">
+    <section className="w-full bg-[#fdf9f5] px-5 md:px-10 lg:px-20 py-12 md:py-20 lg:py-28">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-12 md:gap-16">
 
         <motion.h2

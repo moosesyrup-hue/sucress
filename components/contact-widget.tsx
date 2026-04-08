@@ -32,7 +32,8 @@ export default function ContactWidget() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed bottom-6 right-5 sm:right-6 z-50 flex flex-col items-end gap-2"
+          className="fixed right-5 sm:right-6 z-50 flex flex-col items-end gap-2"
+          style={{ bottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))" }}
           initial={{ opacity: 0, y: 24, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.95 }}
@@ -69,7 +70,7 @@ export default function ContactWidget() {
                 <button
                   onClick={dismiss}
                   aria-label="Collapse"
-                  className="text-white/50 hover:text-white transition-colors duration-150 ml-2"
+                  className="flex items-center justify-center w-8 h-8 -mr-1 rounded-full text-white/50 hover:text-white hover:bg-white/10 transition-colors duration-150 ml-1"
                 >
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>

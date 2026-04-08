@@ -7,7 +7,7 @@ const viewport = { once: true, margin: "0px 0px -60px 0px" };
 
 export default function Section3() {
   return (
-    <section className="w-full bg-white px-5 md:px-10 lg:px-20 py-20 md:py-28">
+    <section className="w-full bg-white px-5 md:px-10 lg:px-20 py-12 md:py-20 lg:py-28">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-12 md:gap-16">
 
         <motion.div
@@ -17,7 +17,7 @@ export default function Section3() {
           viewport={viewport}
           transition={{ duration: 0.7, ease }}
         >
-          <h2 className="text-[#00723c] font-semibold text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px] leading-tight tracking-[-0.03em] whitespace-nowrap">
+          <h2 className="text-[#00723c] font-semibold text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px] leading-tight tracking-[-0.03em] sm:whitespace-nowrap">
             Taste the difference with <em className="font-normal italic">Sucress.</em>
           </h2>
           <p className="text-[#00723c] font-medium text-[17px] sm:text-[19px] md:text-[22px] lg:text-[26px] leading-snug tracking-tight">
