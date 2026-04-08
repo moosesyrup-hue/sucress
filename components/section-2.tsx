@@ -85,9 +85,22 @@ export default function Section2() {
                   <strong className="font-semibold">— Andrew Lessman,</strong>{" "}
                   <span className="font-normal opacity-80">ProCaps Founder</span>
                 </p>
-                <p className="text-white/50 text-[10px] sm:text-[11px] tracking-[0.06em] uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-                  ProCaps Laboratories · Trusted for over 40 years
-                </p>
+                <div className="flex items-center gap-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+                  <div className="relative h-[20px] w-[72px] opacity-70 shrink-0">
+                    <Image
+                      src="/images/procaps-logo.svg"
+                      alt="ProCaps Laboratories"
+                      fill
+                      unoptimized
+                      sizes="72px"
+                      className="object-contain brightness-0 invert"
+                    />
+                  </div>
+                  <div className="w-px h-3.5 bg-white/30 shrink-0" />
+                  <p className="text-white/55 text-[11px] sm:text-[12px] leading-snug">
+                    Trusted for over 40 years
+                  </p>
+                </div>
               </div>
             </button>
           </Animate>
