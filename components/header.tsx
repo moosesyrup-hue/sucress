@@ -14,9 +14,20 @@ export default function Header() {
         <div className="max-w-[1440px] mx-auto">
           {/* Desktop nav */}
           <div className="hidden md:grid grid-cols-3 items-center py-2.5">
-            <p className="font-medium italic text-[#00723c] text-sm lg:text-[15px] tracking-tight capitalize">
-              Non-Caloric Sweetener
-            </p>
+            <div className="flex flex-col gap-0.5">
+              <p className="font-medium italic text-[#00723c] text-sm lg:text-[15px] tracking-tight capitalize">
+                Non-Caloric Sweetener
+              </p>
+              <a
+                href="tel:18008001200"
+                className="flex items-center gap-1.5 text-[#00723c]/55 hover:text-[#00723c] transition-colors duration-150 text-[11px] font-medium tracking-tight w-fit"
+              >
+                <svg width="11" height="11" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                  <path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="currentColor"/>
+                </svg>
+                1-800-800-1200
+              </a>
+            </div>
             <div className="flex justify-center">
               <Link href="/">
                 <div className="relative h-[72px] w-[180px] lg:h-[80px] lg:w-[200px]">

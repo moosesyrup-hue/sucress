@@ -249,6 +249,38 @@ export default function FreeOfferForm() {
                     Send My Free Supply →
                   </button>
 
+                  {/* Call or chat alternative */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1 h-px bg-[#00723c]/8" />
+                    <span className="text-[#00723c]/40 text-[11px] uppercase tracking-wider font-medium whitespace-nowrap">or reach us directly</span>
+                    <div className="flex-1 h-px bg-[#00723c]/8" />
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-2.5">
+                    <a
+                      href="tel:18008001200"
+                      className="flex-1 flex items-center justify-center gap-2 h-11 px-4 rounded-full border-2 border-[#00723c]/15 text-[#00723c] font-semibold text-sm hover:border-[#00723c]/35 hover:bg-[#effae9] transition-all duration-150"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                        <path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="currentColor"/>
+                      </svg>
+                      1-800-800-1200
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (typeof window !== "undefined" && (window as any).Intercom) {
+                          (window as any).Intercom("show");
+                        }
+                      }}
+                      className="flex-1 flex items-center justify-center gap-2 h-11 px-4 rounded-full border-2 border-[#00723c]/15 text-[#00723c] font-semibold text-sm hover:border-[#00723c]/35 hover:bg-[#effae9] transition-all duration-150"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                        <path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="currentColor"/>
+                      </svg>
+                      Live Chat
+                    </button>
+                  </div>
+
                   <p className="text-center text-[#00723c]/40 text-xs leading-relaxed">
                     By submitting, you agree to our{" "}
                     <Link href="#" className="underline underline-offset-2 hover:text-[#00723c]/65 transition-colors">Privacy Policy</Link>{" "}

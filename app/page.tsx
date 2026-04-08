@@ -1,5 +1,6 @@
 import PromoBar from "@/components/promo-bar";
 import Header from "@/components/header";
+import ContactWidget from "@/components/contact-widget";
 import Hero from "@/components/hero";
 import HeroCards from "@/components/hero-cards";
 import Testimonial from "@/components/testimonial";
@@ -30,6 +31,7 @@ export default function Page() {
       <Section6 />
       <FreeOfferForm />
       <Footer />
+      <ContactWidget />
     </main>
   );
 }
