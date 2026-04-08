@@ -59,35 +59,23 @@ export default function Footer() {
           That&apos;s always been the point.
         </motion.p>
 
-        {/* ── Signature ── */}
+        {/* ── ProCaps full logo (contains signature + badge) ── */}
         <motion.div
-          className="mt-14 flex flex-col items-center gap-5"
+          className="mt-14 flex flex-col items-center"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={{ duration: 0.65, ease, delay: 0.13 }}
         >
-          <Image
-            src="/images/signature.svg"
-            alt="Andrew Lessman signature"
-            width={260}
-            height={49}
-            unoptimized
-            className="w-[170px] md:w-[210px] h-auto brightness-0 invert opacity-75"
-          />
-
-          {/* ProCaps logo in white pill — matches reference */}
-          <div className="bg-white rounded-xl px-5 py-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.18)]">
-            <div className="relative h-[36px] w-[120px] md:h-[40px] md:w-[136px]">
-              <Image
-                src="/images/procaps-logo-full.svg"
-                alt="ProCaps Laboratories"
-                fill
-                unoptimized
-                sizes="136px"
-                className="object-contain"
-              />
-            </div>
+          <div className="relative h-[110px] w-[220px] md:h-[130px] md:w-[260px]">
+            <Image
+              src="/images/procaps-logo-full.svg"
+              alt="Andrew Lessman — ProCaps Laboratories"
+              fill
+              unoptimized
+              sizes="260px"
+              className="object-contain"
+            />
           </div>
         </motion.div>
 
