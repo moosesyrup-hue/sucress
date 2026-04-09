@@ -29,21 +29,21 @@ export default function Footer() {
           viewport={viewport}
           transition={{ duration: 0.8, ease }}
         >
-          Pure sweetness.
+          Uncompromising.
           <br />
-          <em className="italic font-normal">Nothing to hide.</em>
+          <em className="italic font-normal">Since 1979.</em>
         </motion.h2>
 
         {/* ── Subtext ── */}
         <motion.p
-          className="text-white/50 text-[15px] md:text-[17px] leading-relaxed text-center max-w-[440px] mt-6"
+          className="text-white/50 text-[15px] md:text-[17px] leading-relaxed text-center max-w-[480px] mt-6"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={{ duration: 0.65, ease, delay: 0.1 }}
         >
-          Two ingredients. No hidden sugars, no fillers, no compromises.
-          That&apos;s always been the point.
+          ProCaps Laboratories was founded by Andrew Lessman with a simple idea:
+          follow the science, respect Mother Nature, and eliminate shortcuts.
         </motion.p>
 
         {/* ── ProCaps full logo (contains signature + badge) ── */}
