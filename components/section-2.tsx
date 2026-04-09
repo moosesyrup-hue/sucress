@@ -82,13 +82,17 @@ export default function Section2() {
               </div>
 
               {/* Bottom-left: title + attribution */}
-              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col gap-1.5 max-w-[55%] sm:max-w-none">
-                <p className="text-white text-[14px] sm:text-[18px] md:text-[21px] font-semibold leading-tight tracking-[-0.01em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-                  Why Sucress is Different
-                </p>
-                <p className="text-white/65 text-[10px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
-                  Andrew Lessman &nbsp;·&nbsp; Founder, ProCaps Laboratories
-                </p>
+              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex items-stretch gap-3 sm:max-w-[58%]">
+                {/* Left accent bar */}
+                <div className="w-[2px] rounded-full bg-white/35 shrink-0 self-stretch" />
+                <div className="flex flex-col gap-2">
+                  <p className="text-white text-[15px] sm:text-[17px] md:text-[20px] font-semibold leading-tight tracking-[-0.015em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                    Why Sucress is Different
+                  </p>
+                  <p className="text-white/65 text-[11px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                    Andrew Lessman &nbsp;·&nbsp; Founder, ProCaps Laboratories
+                  </p>
+                </div>
               </div>
 
               {/* Bottom-right: micro-stats — hidden on mobile to prevent overlap */}
