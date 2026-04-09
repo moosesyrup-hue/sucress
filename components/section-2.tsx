@@ -69,19 +69,20 @@ export default function Section2() {
                 />
               </div>
 
-              {/* Play button + video descriptor */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+              {/* Play button — centered, clean */}
+              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-[84px] h-[84px] md:w-[88px] md:h-[88px] group-hover:scale-110 transition-transform duration-300">
-                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_28px_rgba(0,50,20,0.5)]" aria-hidden="true">
-                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="5" fill="#97e674" fillOpacity="0.18"/>
+                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_28px_rgba(0,0,0,0.45)]" aria-hidden="true">
+                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="5" fill="white" fillOpacity="0.15"/>
                     <path d="M38 30L70 48L38 66V30Z" fill="white"/>
                   </svg>
                 </div>
-                {/* Video descriptor pill */}
-                <div className="flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-full px-3 py-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
-                  <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide">Educational Overview · 4 min</span>
-                </div>
+              </div>
+
+              {/* Duration badge — top right */}
+              <div className="absolute top-4 right-4 sm:top-5 sm:right-5 flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-full px-3 py-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
+                <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide">Educational Overview · 4 min</span>
               </div>
 
               {/* Attribution — frosted glass backing */}
