@@ -11,6 +11,7 @@ import Section3 from "@/components/section-3";
 import Section4 from "@/components/section-4";
 import Section5 from "@/components/section-5";
 import Section6 from "@/components/section-6";
+import SectionProCapsHeritage from "@/components/section-procaps-heritage";
 import FreeOfferForm from "@/components/free-offer-form";
 import Footer from "@/components/footer";
 
@@ -29,6 +30,7 @@ export default function Page() {
       <Section4 />
       <Section5 />
       <Section6 />
+      <SectionProCapsHeritage />
       <FreeOfferForm />
       <Footer />
       <ContactWidget />
