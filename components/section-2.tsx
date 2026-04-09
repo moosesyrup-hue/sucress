@@ -82,8 +82,8 @@ export default function Section2() {
               </div>
 
               {/* Bottom-left: title + attribution */}
-              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col gap-2 sm:max-w-[58%]">
-                <p className="text-white text-[15px] sm:text-[17px] md:text-[20px] font-semibold leading-tight tracking-[-0.015em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col items-start gap-2 text-left sm:max-w-[58%]">
+                <p className="text-white text-[17px] sm:text-[20px] md:text-[24px] font-semibold leading-tight tracking-[-0.015em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                   Why Sucress is Different
                 </p>
                 <p className="text-white/65 text-[11px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
