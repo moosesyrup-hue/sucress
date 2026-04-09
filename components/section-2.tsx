@@ -61,10 +61,10 @@ export default function Section2() {
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.015]"
                   priority
                 />
-                {/* Gradient vignette — darker at bottom for text, transparent at top for Andrew's face */}
+                {/* Gradient vignette — fades to dark green so thumbnail bleeds into the section */}
                 <div
                   className="absolute inset-0 pointer-events-none"
-                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0.05) 65%, transparent 100%)" }}
+                  style={{ background: "linear-gradient(to top, rgba(0,50,20,0.72) 0%, rgba(0,30,12,0.22) 38%, rgba(0,0,0,0.06) 65%, transparent 100%)" }}
                   aria-hidden="true"
                 />
               </div>
@@ -72,13 +72,13 @@ export default function Section2() {
               {/* Play button + video descriptor */}
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
                 <div className="relative w-[84px] h-[84px] md:w-[88px] md:h-[88px] group-hover:scale-110 transition-transform duration-300">
-                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_24px_rgba(0,0,0,0.4)]" aria-hidden="true">
-                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="5" fill="white" fillOpacity="0.15"/>
+                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_28px_rgba(0,50,20,0.5)]" aria-hidden="true">
+                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="5" fill="#97e674" fillOpacity="0.18"/>
                     <path d="M38 30L70 48L38 66V30Z" fill="white"/>
                   </svg>
                 </div>
                 {/* Video descriptor pill */}
-                <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1">
+                <div className="flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm border border-[#97e674]/25 rounded-full px-3 py-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
                   <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide">Educational Overview · 4 min</span>
                 </div>
@@ -86,7 +86,7 @@ export default function Section2() {
 
               {/* Attribution — frosted glass backing */}
               <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9">
-                <div className="inline-flex items-center gap-2 bg-black/25 backdrop-blur-sm border border-white/15 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5">
+                <div className="inline-flex items-center gap-2 bg-[#00723c]/55 backdrop-blur-sm border border-[#97e674]/20 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5">
                   <div className="w-px h-4 bg-white/30 shrink-0" />
                   <p className="text-white text-[11px] sm:text-[13px] font-medium tracking-[0.03em] leading-tight">
                     Andrew Lessman
