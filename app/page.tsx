@@ -26,11 +26,13 @@ export default function Page() {
       <ScrollingTicker />
       <Section2 />
       <Section3 />
+      <div id="capture-bottom">
       <Section4 />
       <Section5 />
       <Section6 />
 <FreeOfferForm />
       <Footer />
+      </div>
       <ContactWidget />
     </main>
   );

@@ -1,19 +1,17 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import LegalModal from "@/components/legal-modal";
+
+type ModalType = "privacy" | "terms" | "accessibility";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const viewport = { once: true, margin: "0px 0px -40px 0px" };
 
-const NAV_LINKS = [
-  { label: "About", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Accessibility", href: "#" },
-];
-
 export default function Footer() {
+  const [activeModal, setActiveModal] = useState<ModalType | null>(null);
+
   return (
     <footer className="w-full bg-[#00723c] relative overflow-hidden">
 
@@ -136,15 +134,21 @@ export default function Footer() {
           transition={{ duration: 0.55, ease, delay: 0.2 }}
         >
           <nav className="flex flex-wrap items-center justify-center gap-x-1 gap-y-2" aria-label="Footer navigation">
-            {NAV_LINKS.map((link, i) => (
-              <span key={link.label} className="flex items-center">
-                <Link
-                  href={link.href}
-                  className="text-white/35 text-[13px] hover:text-white/65 transition-colors duration-150 px-2.5"
+            {(
+              [
+                { label: "Privacy Policy", modal: "privacy" as ModalType },
+                { label: "Terms of Use", modal: "terms" as ModalType },
+                { label: "Accessibility", modal: "accessibility" as ModalType },
+              ] as const
+            ).map((item, i, arr) => (
+              <span key={item.label} className="flex items-center">
+                <button
+                  onClick={() => setActiveModal(item.modal)}
+                  className="text-white/35 text-[13px] hover:text-white/65 transition-colors duration-150 px-2.5 cursor-pointer"
                 >
-                  {link.label}
-                </Link>
-                {i < NAV_LINKS.length - 1 && (
+                  {item.label}
+                </button>
+                {i < arr.length - 1 && (
                   <span className="text-white/18 text-sm select-none">&bull;</span>
                 )}
               </span>
@@ -170,6 +174,8 @@ export default function Footer() {
         </motion.div>
 
       </div>
+
+      <LegalModal type={activeModal} onClose={() => setActiveModal(null)} />
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, STIX_Two_Text, Marcellus } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,7 +46,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${stixTwoText.variable} ${marcellus.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
+      </body>
     </html>
   );
 }
