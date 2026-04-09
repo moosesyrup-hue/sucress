@@ -79,22 +79,31 @@ export default function Section2() {
                 </div>
               </div>
 
-              {/* Duration badge — top right */}
-              <div className="absolute top-4 right-4 sm:top-5 sm:right-5 flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-full px-3 py-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
-                <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide">Educational Overview · 4 min</span>
+              {/* Bottom-left: video title + attribution */}
+              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col gap-1.5">
+                <p
+                  className="text-white text-[15px] sm:text-[18px] md:text-[20px] font-semibold leading-tight tracking-[-0.01em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
+                >
+                  Why Sucress is Different
+                </p>
+                <p className="text-white/70 text-[11px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+                  Andrew Lessman &nbsp;·&nbsp; Founder, ProCaps Laboratories
+                </p>
               </div>
 
-              {/* Attribution — frosted glass backing */}
-              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9">
-                <div className="inline-flex items-center gap-2 bg-[#00723c]/55 backdrop-blur-sm rounded-xl px-3 py-2 sm:px-4 sm:py-2.5">
-                  <div className="w-px h-4 bg-white/30 shrink-0" />
-                  <p className="text-white text-[11px] sm:text-[13px] font-medium tracking-[0.03em] leading-tight">
-                    Andrew Lessman
-                    <br className="sm:hidden" />
-                    <span className="hidden sm:inline">, </span>
-                    <span className="font-normal opacity-70 text-[10px] sm:text-[12px]">Founder of ProCaps Laboratories</span>
-                  </p>
+              {/* Bottom-right: micro-stats */}
+              <div className="absolute bottom-4 right-4 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9">
+                <div className="flex flex-col gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-xl px-3 py-2.5 sm:px-4 sm:py-3">
+                  {[
+                    "2 Ingredients",
+                    "Zero Sugar",
+                    "Non-GMO",
+                  ].map((stat) => (
+                    <div key={stat} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
+                      <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide leading-none">{stat}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </button>
