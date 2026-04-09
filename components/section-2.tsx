@@ -48,57 +48,53 @@ export default function Section2() {
           <Animate variants={fadeScale} className="w-full max-w-[1280px]">
             <button
               onClick={openOverlay}
-              className="group relative w-full block rounded-2xl overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-[#97e674]/60"
+              className="group relative w-full block rounded-2xl overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-[#97e674]/60 shadow-[0_24px_64px_rgba(0,0,0,0.28)] hover:shadow-[0_28px_72px_rgba(0,0,0,0.36)] transition-shadow duration-500"
               aria-label="Play Andrew Lessman video about Sucress"
             >
-              {/* Taller aspect on mobile for better visual presence, widescreen on md+ */}
+              {/* Thumbnail */}
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[1360/755]">
                 <Image
                   src="/images/video-thumbnail.png"
                   alt="Andrew Lessman talks about Sucress — click to play"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.015]"
+                  className="object-cover transition-all duration-700 group-hover:scale-[1.015] group-hover:brightness-105"
                   priority
                 />
-                {/* Gradient vignette — fades to dark green so thumbnail bleeds into the section */}
+                {/* Gradient vignette — dark green bottom bleeds into section */}
                 <div
                   className="absolute inset-0 pointer-events-none"
-                  style={{ background: "linear-gradient(to top, rgba(0,50,20,0.72) 0%, rgba(0,30,12,0.22) 38%, rgba(0,0,0,0.06) 65%, transparent 100%)" }}
+                  style={{ background: "linear-gradient(to top, rgba(0,50,20,0.78) 0%, rgba(0,30,12,0.28) 40%, rgba(0,0,0,0.06) 65%, transparent 100%)" }}
                   aria-hidden="true"
                 />
               </div>
 
-              {/* Play button — centered, clean */}
+              {/* Play button — centered */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-[84px] h-[84px] md:w-[88px] md:h-[88px] group-hover:scale-110 transition-transform duration-300">
-                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_4px_28px_rgba(0,0,0,0.45)]" aria-hidden="true">
-                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="5" fill="white" fillOpacity="0.15"/>
+                <div className="relative w-[88px] h-[88px] md:w-[100px] md:h-[100px] group-hover:scale-110 transition-transform duration-300">
+                  {/* Hover ring */}
+                  <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 ring-white/25 transition-all duration-300 scale-[1.18]" />
+                  <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_6px_32px_rgba(0,0,0,0.5)]" aria-hidden="true">
+                    <circle cx="48" cy="48" r="44" stroke="white" strokeWidth="4.5" fill="white" fillOpacity="0.18"/>
                     <path d="M38 30L70 48L38 66V30Z" fill="white"/>
                   </svg>
                 </div>
               </div>
 
-              {/* Bottom-left: video title + attribution */}
-              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col gap-1.5">
-                <p
-                  className="text-white text-[15px] sm:text-[18px] md:text-[20px] font-semibold leading-tight tracking-[-0.01em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
-                >
+              {/* Bottom-left: title + attribution */}
+              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col gap-1.5 max-w-[55%] sm:max-w-none">
+                <p className="text-white text-[14px] sm:text-[18px] md:text-[21px] font-semibold leading-tight tracking-[-0.01em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                   Why Sucress is Different
                 </p>
-                <p className="text-white/70 text-[11px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+                <p className="text-white/65 text-[10px] sm:text-[12px] md:text-[13px] font-medium tracking-[0.03em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                   Andrew Lessman &nbsp;·&nbsp; Founder, ProCaps Laboratories
                 </p>
               </div>
 
-              {/* Bottom-right: micro-stats */}
-              <div className="absolute bottom-4 right-4 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9">
-                <div className="flex flex-col gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-xl px-3 py-2.5 sm:px-4 sm:py-3">
-                  {[
-                    "2 Ingredients",
-                    "Zero Sugar",
-                    "Non-GMO",
-                  ].map((stat) => (
+              {/* Bottom-right: micro-stats — hidden on mobile to prevent overlap */}
+              <div className="absolute bottom-4 right-4 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9 hidden sm:block">
+                <div className="flex flex-col gap-2 bg-[#00723c]/60 backdrop-blur-sm rounded-2xl px-4 py-3">
+                  {["2 Ingredients", "Zero Sugar", "Non-GMO"].map((stat) => (
                     <div key={stat} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
                       <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide leading-none">{stat}</span>
@@ -108,9 +104,12 @@ export default function Section2() {
               </div>
             </button>
 
+            {/* ── Divider ── */}
+            <div className="w-full h-px bg-white/10 mt-14 md:mt-20" />
+
             {/* ── ProCaps brand statement ── */}
             <motion.div
-              className="w-full mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start"
+              className="w-full mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -40px 0px" }}
