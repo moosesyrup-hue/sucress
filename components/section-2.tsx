@@ -78,7 +78,7 @@ export default function Section2() {
                   </svg>
                 </div>
                 {/* Video descriptor pill */}
-                <div className="flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm border border-[#97e674]/25 rounded-full px-3 py-1">
+                <div className="flex items-center gap-1.5 bg-[#00723c]/55 backdrop-blur-sm rounded-full px-3 py-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] shrink-0" />
                   <span className="text-white text-[11px] sm:text-[12px] font-medium tracking-wide">Educational Overview · 4 min</span>
                 </div>
@@ -86,7 +86,7 @@ export default function Section2() {
 
               {/* Attribution — frosted glass backing */}
               <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9">
-                <div className="inline-flex items-center gap-2 bg-[#00723c]/55 backdrop-blur-sm border border-[#97e674]/20 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5">
+                <div className="inline-flex items-center gap-2 bg-[#00723c]/55 backdrop-blur-sm rounded-xl px-3 py-2 sm:px-4 sm:py-2.5">
                   <div className="w-px h-4 bg-white/30 shrink-0" />
                   <p className="text-white text-[11px] sm:text-[13px] font-medium tracking-[0.03em] leading-tight">
                     Andrew Lessman
