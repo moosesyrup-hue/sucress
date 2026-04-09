@@ -60,7 +60,7 @@ export default function FreeOfferForm() {
         aria-hidden="true"
       />
 
-      <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28">
+      <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28 pb-12 md:pb-16">
         <div className="max-w-[1440px] mx-auto">
 
           {/* items-stretch so both columns are the same height */}
