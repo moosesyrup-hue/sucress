@@ -88,43 +88,47 @@ export default function Section2() {
                   <strong className="font-semibold">— Andrew Lessman,</strong>{" "}
                   <span className="font-normal opacity-80">ProCaps Founder</span>
                 </p>
-                {/* Hide the logo row on very small screens to avoid clutter */}
-                <div className="hidden sm:flex items-center gap-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-                  <div className="relative h-[20px] w-[72px] opacity-70 shrink-0">
-                    <Image
-                      src="/images/procaps-logo.svg"
-                      alt="ProCaps Laboratories"
-                      fill
-                      unoptimized
-                      sizes="72px"
-                      className="object-contain brightness-0 invert"
-                    />
-                  </div>
-                  <div className="w-px h-3.5 bg-white/30 shrink-0" />
-                  <p className="text-white/55 text-[11px] sm:text-[12px] leading-snug">
-                    Trusted for over 40 years
-                  </p>
-                </div>
               </div>
             </button>
 
-            {/* ProCaps trust badge — mobile only, below the video */}
-            <div className="flex sm:hidden items-center justify-center gap-3 mt-7">
-              <div className="relative h-[22px] w-[78px] opacity-75 shrink-0">
-                <Image
-                  src="/images/procaps-logo.svg"
-                  alt="ProCaps Laboratories"
-                  fill
-                  unoptimized
-                  sizes="78px"
-                  className="object-contain brightness-0 invert"
-                />
+            {/* ── ProCaps brand statement ── */}
+            <motion.div
+              className="w-full mt-12 md:mt-16 pt-10 md:pt-14 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+              transition={{ duration: 0.75, ease }}
+            >
+              {/* Left — display headline */}
+              <h3
+                className="text-white text-[clamp(30px,4.5vw,56px)] leading-[0.95] tracking-[-0.025em]"
+                style={{ fontFamily: "var(--font-stix)" }}
+              >
+                Education first.
+                <br />
+                <em className="font-normal italic">The rest follows.</em>
+              </h3>
+
+              {/* Right — body + ProCaps logo */}
+              <div className="flex flex-col gap-7">
+                <p className="text-white/60 text-[15px] md:text-[16px] lg:text-[17px] leading-relaxed">
+                  Andrew Lessman has always believed the strongest bridge between
+                  science and the consumer is education. Explain the ingredients
+                  clearly, answer questions honestly, and let people decide for
+                  themselves.
+                </p>
+                <div className="relative h-[80px] w-[200px]">
+                  <Image
+                    src="/images/procaps-logo-full.svg"
+                    alt="Andrew Lessman — ProCaps Laboratories"
+                    fill
+                    unoptimized
+                    sizes="200px"
+                    className="object-contain object-left"
+                  />
+                </div>
               </div>
-              <div className="w-px h-4 bg-white/25 shrink-0" />
-              <p className="text-white/60 text-[12px] font-medium tracking-tight leading-snug">
-                Trusted for over 40 years
-              </p>
-            </div>
+            </motion.div>
           </Animate>
         </div>
       </section>
