@@ -36,12 +36,12 @@ export default function Section2() {
   return (
     <>
       <section className="w-full bg-[#00723c] py-12 md:py-20 lg:py-28 px-5 md:px-10 lg:px-20">
-        <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-10 md:gap-20">
+        <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-8 md:gap-14">
           <Animate variants={fadeUp}>
             <h2 className="text-white font-semibold text-[26px] sm:text-[34px] md:text-[44px] lg:text-[54px] leading-tight tracking-[-0.03em] text-center max-w-[900px]">
               Discover the sweet benefits of{" "}
               <em className="font-normal italic">Sucress</em>{" "}
-              with Andrew Lessman!
+              with Andrew Lessman
             </h2>
           </Animate>
 
@@ -74,26 +74,18 @@ export default function Section2() {
                 </div>
               </div>
 
-              {/* Attribution overlay — simplified on mobile, full on sm+ */}
-              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9 flex flex-col items-start gap-1.5 md:gap-2.5">
-                <Image
-                  src="/images/signature.svg"
-                  alt="Andrew Lessman signature"
-                  width={380}
-                  height={71}
-                  unoptimized
-                  className="block w-[140px] sm:w-[220px] md:w-[280px] lg:w-[320px] h-auto"
-                />
-                <p className="text-white text-[11px] sm:text-[13px] md:text-[14px] tracking-[0.05em] drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
-                  <strong className="font-semibold">— Andrew Lessman,</strong>{" "}
-                  <span className="font-normal opacity-80">ProCaps Founder</span>
+              {/* Attribution overlay — text only, no signature (appears in brand statement below) */}
+              <div className="absolute bottom-4 left-4 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9">
+                <p className="text-white text-[11px] sm:text-[13px] md:text-[14px] font-medium tracking-[0.04em] drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                  — Andrew Lessman,{" "}
+                  <span className="font-normal opacity-75">Founder of ProCaps Laboratories</span>
                 </p>
               </div>
             </button>
 
             {/* ── ProCaps brand statement ── */}
             <motion.div
-              className="w-full mt-12 md:mt-16 pt-10 md:pt-14 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center"
+              className="w-full mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -40px 0px" }}
@@ -117,13 +109,13 @@ export default function Section2() {
                   clearly, answer questions honestly, and let people decide for
                   themselves.
                 </p>
-                <div className="relative h-[80px] w-[200px]">
+                <div className="relative h-[82px] w-[150px]">
                   <Image
                     src="/images/procaps-logo-full.svg"
                     alt="Andrew Lessman — ProCaps Laboratories"
                     fill
                     unoptimized
-                    sizes="200px"
+                    sizes="150px"
                     className="object-contain object-left"
                   />
                 </div>
