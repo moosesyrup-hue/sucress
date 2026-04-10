@@ -243,6 +243,7 @@ export default function FreeOfferForm() {
                   src="/images/sucress-packets-coffee.png"
                   alt="Sucress packets next to a cup of coffee"
                   fill
+                  unoptimized
                   className="object-contain"
                   sizes="38vw"
                 />
