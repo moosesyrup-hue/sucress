@@ -245,7 +245,7 @@ export default function FreeOfferForm() {
                   alt="Sucress packets next to a cup of coffee"
                   fill
                   unoptimized
-                  className="object-contain object-bottom scale-[1.15]"
+                  className="object-contain object-bottom scale-[1.15] translate-y-[6%]"
                   sizes="38vw"
                 />
               </motion.div>
