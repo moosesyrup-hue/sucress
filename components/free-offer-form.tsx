@@ -188,7 +188,7 @@ export default function FreeOfferForm() {
         aria-hidden="true"
       />
 
-      <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28 pb-4 md:pb-6">
+      <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28 pb-0">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.68fr] gap-10 lg:gap-16 items-start">
 
