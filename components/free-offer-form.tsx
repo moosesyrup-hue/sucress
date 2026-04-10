@@ -239,14 +239,16 @@ export default function FreeOfferForm() {
                 viewport={viewport}
                 transition={{ duration: 0.8, ease, delay: 0.1 }}
               >
-                <Image
-                  src="/images/sucress-packets-coffee.png"
-                  alt="Sucress packets next to a cup of coffee"
-                  fill
-                  unoptimized
-                  className="object-contain"
-                  sizes="38vw"
-                />
+                <div className="absolute inset-[5%]">
+                  <Image
+                    src="/images/sucress-packets-coffee.png"
+                    alt="Sucress packets next to a cup of coffee"
+                    fill
+                    unoptimized
+                    className="object-contain"
+                    sizes="38vw"
+                  />
+                </div>
               </motion.div>
             </motion.div>
 
@@ -401,23 +403,39 @@ export default function FreeOfferForm() {
                       </div>
 
                       {eligibility === "existing_customer" ? (
-                        <div>
-                          <h3 className="text-[#00723c] text-[24px] md:text-[28px] leading-tight tracking-[-0.02em] mb-2" style={{ fontFamily: "var(--font-stix)" }}>
+                        <div className="flex flex-col gap-3">
+                          <div className="inline-flex items-center gap-2 self-start bg-[#fafdf8] border border-[#00723c]/15 rounded-full px-3 py-1.5">
+                            <svg width="12" height="12" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                              <circle cx="10" cy="7" r="3.5" stroke="#00723c" strokeWidth="1.7"/>
+                              <path d="M3 17c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="#00723c" strokeWidth="1.7" strokeLinecap="round"/>
+                            </svg>
+                            <span className="text-[#00723c] text-[12px] font-medium truncate max-w-[220px]">{form.email}</span>
+                          </div>
+                          <h3 className="text-[#00723c] text-[24px] md:text-[28px] leading-tight tracking-[-0.02em]" style={{ fontFamily: "var(--font-stix)" }}>
                             You&apos;re already part of<br />
                             <em className="italic font-normal">the ProCaps family.</em>
                           </h3>
                           <p className="text-[#00723c]/60 text-[15px] leading-relaxed">
-                            The free Sucress offer is reserved for first-time ProCaps customers. Since you&apos;re already with us — thank you. Here&apos;s something just for you.
+                            We recognized your email as an existing ProCaps customer. The free Sucress offer is reserved for first-time customers — but here&apos;s something just for you.
                           </p>
                         </div>
                       ) : (
-                        <div>
-                          <h3 className="text-[#00723c] text-[24px] md:text-[28px] leading-tight tracking-[-0.02em] mb-2" style={{ fontFamily: "var(--font-stix)" }}>
+                        <div className="flex flex-col gap-3">
+                          <div className="inline-flex items-center gap-2 self-start bg-[#fafdf8] border border-[#00723c]/15 rounded-full px-3 py-1.5">
+                            <svg width="12" height="12" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                              <path d="M10 2C7.24 2 5 4.24 5 7c0 4.25 5 11 5 11s5-6.75 5-11c0-2.76-2.24-5-5-5z" stroke="#00723c" strokeWidth="1.7" strokeLinejoin="round"/>
+                              <circle cx="10" cy="7" r="1.5" stroke="#00723c" strokeWidth="1.5"/>
+                            </svg>
+                            <span className="text-[#00723c] text-[12px] font-medium">
+                              {form.city && form.state ? `${form.city}, ${form.state}` : "Your address"}
+                            </span>
+                          </div>
+                          <h3 className="text-[#00723c] text-[24px] md:text-[28px] leading-tight tracking-[-0.02em]" style={{ fontFamily: "var(--font-stix)" }}>
                             This address has already<br />
                             <em className="italic font-normal">received a free supply.</em>
                           </h3>
                           <p className="text-[#00723c]/60 text-[15px] leading-relaxed">
-                            This offer is limited to one per household. Looks like a free supply was already sent to your address — we hope you&apos;re loving it.
+                            This offer is limited to one per household. It looks like a free supply was already sent to {form.city && form.state ? `${form.city}, ${form.state}` : "your address"} — we hope you&apos;re loving it.
                           </p>
                         </div>
                       )}
