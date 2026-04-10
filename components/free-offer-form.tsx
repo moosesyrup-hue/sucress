@@ -82,6 +82,7 @@ export default function FreeOfferForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [continueError, setContinueError] = useState("");
+  const [isContinuing, setIsContinuing] = useState(false);
 
   const [form, setForm] = useState({
     firstName: "", lastName: "", email: "",
@@ -128,14 +129,18 @@ export default function FreeOfferForm() {
       return;
     }
 
-    // Run email check if not yet done
-    let currentEligibility = eligibility;
-    if (eligibility === "idle" || eligibility === "checking") {
-      setEligibility("checking");
+    setIsContinuing(true);
+
+    // Run email check (always — ignore any in-flight blur check)
+    let currentEligibility: EligibilityStatus = eligibility;
+    if (eligibility !== "eligible") {
       currentEligibility = await mockCheckEmail(email);
       setEligibility(currentEligibility);
     }
-    if (currentEligibility !== "eligible") return; // denied state handles the rest
+    if (currentEligibility !== "eligible") {
+      setIsContinuing(false);
+      return;
+    }
 
     // Run address check
     setAddressChecking(true);
@@ -143,9 +148,11 @@ export default function FreeOfferForm() {
     setAddressChecking(false);
     if (addressResult === "address_claimed") {
       setEligibility("address_claimed");
+      setIsContinuing(false);
       return;
     }
 
+    setIsContinuing(false);
     setFormStep(2);
   }, [form, eligibility]);
 
@@ -537,18 +544,6 @@ export default function FreeOfferForm() {
                           transition={{ duration: 0.3, ease }}
                           className="flex flex-col gap-5 flex-1"
                         >
-                          {/* Name */}
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="flex flex-col gap-1.5">
-                              <label htmlFor="firstName" className={labelClass}>First Name</label>
-                              <input id="firstName" name="firstName" type="text" required value={form.firstName} onChange={handleChange} placeholder="Jane" className={inputClass} />
-                            </div>
-                            <div className="flex flex-col gap-1.5">
-                              <label htmlFor="lastName" className={labelClass}>Last Name</label>
-                              <input id="lastName" name="lastName" type="text" required value={form.lastName} onChange={handleChange} placeholder="Doe" className={inputClass} />
-                            </div>
-                          </div>
-
                           {/* Email with eligibility indicator */}
                           <div className="flex flex-col gap-1.5">
                             <label htmlFor="email" className={labelClass}>Email Address</label>
@@ -588,6 +583,18 @@ export default function FreeOfferForm() {
                             )}
                           </div>
 
+                          {/* Name */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="flex flex-col gap-1.5">
+                              <label htmlFor="firstName" className={labelClass}>First Name</label>
+                              <input id="firstName" name="firstName" type="text" required value={form.firstName} onChange={handleChange} placeholder="Jane" className={inputClass} />
+                            </div>
+                            <div className="flex flex-col gap-1.5">
+                              <label htmlFor="lastName" className={labelClass}>Last Name</label>
+                              <input id="lastName" name="lastName" type="text" required value={form.lastName} onChange={handleChange} placeholder="Doe" className={inputClass} />
+                            </div>
+                          </div>
+
                           {/* Address */}
                           <div className="flex flex-col gap-1.5">
                             <label htmlFor="address" className={labelClass}>Street Address</label>
@@ -600,8 +607,8 @@ export default function FreeOfferForm() {
                               <label htmlFor="city" className={labelClass}>City</label>
                               <input id="city" name="city" type="text" required value={form.city} onChange={handleChange} placeholder="Las Vegas" className={inputClass} />
                             </div>
-                            <div className="grid grid-cols-3 gap-3">
-                              <div className="col-span-2 flex flex-col gap-1.5">
+                            <div className="grid grid-cols-2 gap-3">
+                              <div className="flex flex-col gap-1.5">
                                 <label htmlFor="state" className={labelClass}>State</label>
                                 <div className="relative">
                                   <select id="state" name="state" required value={form.state} onChange={handleChange} className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none">
@@ -615,7 +622,7 @@ export default function FreeOfferForm() {
                                   </div>
                                 </div>
                               </div>
-                              <div className="col-span-1 flex flex-col gap-1.5">
+                              <div className="flex flex-col gap-1.5">
                                 <label htmlFor="zip" className={labelClass}>ZIP</label>
                                 <div className="relative">
                                   <input id="zip" name="zip" type="text" required inputMode="numeric" pattern="[0-9]{5}" value={form.zip} onChange={handleChange} onBlur={handleZipBlur} placeholder="89101" className={`${inputClass} ${addressChecking ? "pr-11" : ""}`} />
@@ -641,10 +648,10 @@ export default function FreeOfferForm() {
                           <button
                             type="button"
                             onClick={handleContinue}
-                            disabled={isChecking || addressChecking}
+                            disabled={isContinuing}
                             className="h-14 w-full bg-[#97e674] rounded-full text-[#064326] font-bold text-base md:text-lg hover:bg-[#7dc45e] active:scale-[0.98] transition-all duration-150 tracking-tight disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                           >
-                            {isChecking || addressChecking ? (
+                            {isContinuing ? (
                               <>
                                 <svg className="animate-spin" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
                                   <circle cx="9" cy="9" r="7" stroke="#064326" strokeOpacity="0.3" strokeWidth="2.5"/>
