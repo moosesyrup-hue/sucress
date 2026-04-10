@@ -233,24 +233,18 @@ export default function FreeOfferForm() {
               </ul>
 
               <motion.div
-                className="relative hidden lg:block rounded-2xl overflow-hidden aspect-[4/3]"
+                className="relative hidden lg:block rounded-2xl overflow-hidden aspect-[4/3] bg-white"
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewport}
                 transition={{ duration: 0.8, ease, delay: 0.1 }}
               >
-                {/* TODO: swap confirmed/denied src to shorter-cropped asset when provided */}
                 <Image
-                  src="/images/hero-center-coffee.png"
-                  alt="Hand pouring Sucress into a green coffee cup"
+                  src="/images/sucress-packets-coffee.png"
+                  alt="Sucress packets next to a cup of coffee"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain"
                   sizes="38vw"
-                />
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{ background: "linear-gradient(to top, rgba(0,114,60,0.18) 0%, transparent 40%)" }}
-                  aria-hidden="true"
                 />
               </motion.div>
             </motion.div>
