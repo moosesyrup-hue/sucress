@@ -474,7 +474,7 @@ export default function FreeOfferForm() {
                     </div>
 
                     <a
-                      href="https://www.procapslabs.com"
+                      href="https://www.procapslabs.com/Products/Sucress-Stevia-Non-Caloric-Sweetener/301430/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 h-14 w-full bg-[#97e674] hover:bg-[#7dc45e] text-[#064326] font-bold text-[15px] rounded-full active:scale-[0.98] transition-all duration-150 tracking-tight"
