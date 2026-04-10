@@ -233,7 +233,7 @@ export default function FreeOfferForm() {
               </ul>
 
               <motion.div
-                className="relative hidden lg:block rounded-2xl overflow-hidden aspect-[515/508]"
+                className="relative hidden lg:block rounded-2xl overflow-hidden aspect-[1136/1418]"
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewport}
