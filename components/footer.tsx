@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="relative max-w-[1440px] mx-auto px-5 md:px-10 lg:px-20 pt-0 pb-0 flex flex-col items-center">
 
         {/* ── Divider — matches the one above Education first. in section-2 ── */}
-        <div className="w-full h-px bg-white/10 mb-12 md:mb-16" />
+        <div className="w-full h-px bg-white/10 mb-6 md:mb-8" />
 
         {/* ── Headline ── */}
         <motion.h2
