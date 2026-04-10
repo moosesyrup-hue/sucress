@@ -239,7 +239,7 @@ export default function FreeOfferForm() {
                 viewport={viewport}
                 transition={{ duration: 0.8, ease, delay: 0.1 }}
               >
-                <div className="absolute inset-[5%]">
+                <div className="absolute inset-[5%] -translate-y-[8%]">
                   <Image
                     src="/images/sucress-packets-coffee.png"
                     alt="Sucress packets next to a cup of coffee"
