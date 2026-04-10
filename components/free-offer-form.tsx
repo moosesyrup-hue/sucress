@@ -190,11 +190,11 @@ export default function FreeOfferForm() {
 
       <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28 pb-0">
         <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.68fr] gap-10 lg:gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.68fr] gap-10 lg:gap-16 items-start">
 
             {/* ── LEFT COLUMN ── */}
             <motion.div
-              className="flex flex-col gap-7 h-full"
+              className="flex flex-col gap-7"
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={viewport}
@@ -233,8 +233,7 @@ export default function FreeOfferForm() {
               </ul>
 
               <motion.div
-                className="relative hidden lg:block flex-1 min-h-0"
-                style={{ minHeight: "260px" }}
+                className="relative hidden lg:block h-[420px]"
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewport}
