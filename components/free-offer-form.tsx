@@ -233,7 +233,7 @@ export default function FreeOfferForm() {
               </ul>
 
               <motion.div
-                className="relative hidden lg:block flex-1 min-h-0 rounded-2xl overflow-hidden"
+                className="relative hidden lg:block flex-1 min-h-0"
                 style={{ minHeight: "260px" }}
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -245,7 +245,7 @@ export default function FreeOfferForm() {
                   alt="Sucress packets next to a cup of coffee"
                   fill
                   unoptimized
-                  className="object-contain object-bottom"
+                  className="object-contain object-bottom scale-[1.15]"
                   sizes="38vw"
                 />
               </motion.div>
