@@ -190,11 +190,11 @@ export default function FreeOfferForm() {
 
       <div className="relative w-full px-5 md:px-10 lg:px-20 py-20 md:py-28 pb-0">
         <div className="max-w-[1440px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.68fr] gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.68fr] gap-10 lg:gap-16 items-stretch">
 
             {/* ── LEFT COLUMN ── */}
             <motion.div
-              className="flex flex-col gap-7"
+              className="flex flex-col gap-7 h-full"
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={viewport}
@@ -233,22 +233,21 @@ export default function FreeOfferForm() {
               </ul>
 
               <motion.div
-                className="relative hidden lg:block rounded-2xl overflow-hidden aspect-[1136/1418]"
+                className="relative hidden lg:block flex-1 min-h-0 rounded-2xl overflow-hidden"
+                style={{ minHeight: "260px" }}
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={viewport}
                 transition={{ duration: 0.8, ease, delay: 0.1 }}
               >
-                <div className="absolute inset-[5%] -translate-y-[8%]">
-                  <Image
-                    src="/images/sucress-packets-coffee.png"
-                    alt="Sucress packets next to a cup of coffee"
-                    fill
-                    unoptimized
-                    className="object-contain"
-                    sizes="38vw"
-                  />
-                </div>
+                <Image
+                  src="/images/sucress-packets-coffee.png"
+                  alt="Sucress packets next to a cup of coffee"
+                  fill
+                  unoptimized
+                  className="object-contain object-bottom"
+                  sizes="38vw"
+                />
               </motion.div>
             </motion.div>
 
