@@ -498,20 +498,34 @@ export default function FreeOfferForm() {
                       <div className="flex-1 h-px bg-[#00723c]/8" />
                     </div>
 
-                    <div className="flex gap-3">
-                      <a href="tel:18008001200" className="flex-1 flex items-center gap-2.5 h-14 px-4 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
-                        <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
-                        <div className="flex flex-col">
-                          <span className="font-semibold text-[13px] leading-tight">Call Us</span>
-                          <span className="text-[#00723c]/50 text-[11px]">Mon–Sun, 6am–6pm PT</span>
+                    <div className="flex flex-col sm:flex-row gap-2.5">
+                      <a href="tel:18008001200" className="flex-1 flex sm:flex-col items-center sm:justify-center gap-4 sm:gap-2 px-5 py-3.5 sm:py-5 rounded-2xl bg-white border border-[#00723c]/12 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.99] transition-all duration-150 group">
+                        <span className="flex shrink-0 items-center justify-center w-10 h-10 rounded-full bg-[#effae9] group-hover:bg-[#97e674]/30 transition-colors duration-150">
+                          <svg width="16" height="16" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
+                        </span>
+                        <div className="flex flex-col sm:items-center min-w-0 flex-1 sm:flex-none">
+                          <span className="font-semibold text-[14px] leading-tight">Call Us</span>
+                          <span className="text-[#00723c]/60 text-[13px] leading-tight">1-800-800-1200</span>
+                          <span className="hidden sm:block text-[11px] text-[#00723c]/40 mt-0.5">Mon–Sun, 6am–6pm PT</span>
                         </div>
+                        <span className="sm:hidden ml-auto shrink-0 text-[11px] font-medium text-[#00723c]/40 bg-[#f5fbf2] border border-[#00723c]/10 rounded-lg px-2.5 py-1 whitespace-nowrap">Mon–Sun 6am–6pm PT</span>
                       </a>
-                      <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex items-center gap-2.5 h-14 px-4 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
-                        <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="#00723c"/></svg>
-                        <div className="flex flex-col items-start">
-                          <span className="font-semibold text-[13px] leading-tight">Live Chat</span>
-                          <span className="text-[#00723c]/50 text-[11px]">Replies instantly</span>
+                      <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex sm:flex-col items-center sm:justify-center gap-4 sm:gap-2 px-5 py-3.5 sm:py-5 w-full rounded-2xl bg-white border border-[#00723c]/12 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.99] transition-all duration-150 group">
+                        <span className="flex shrink-0 items-center justify-center w-10 h-10 rounded-full bg-[#effae9] group-hover:bg-[#97e674]/30 transition-colors duration-150">
+                          <svg width="16" height="16" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="#00723c"/></svg>
+                        </span>
+                        <div className="flex flex-col sm:items-center items-start min-w-0 flex-1 sm:flex-none">
+                          <span className="font-semibold text-[14px] leading-tight">Live Chat</span>
+                          <span className="text-[#00723c]/50 text-[13px] leading-tight">Typically replies instantly</span>
+                          <span className="hidden sm:flex items-center gap-1.5 mt-0.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] animate-pulse" />
+                            <span className="text-[11px] text-[#00723c]/40 font-medium">Online now</span>
+                          </span>
                         </div>
+                        <span className="sm:hidden ml-auto shrink-0 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] animate-pulse" />
+                          <span className="text-[11px] font-medium text-[#00723c]/40">Online</span>
+                        </span>
                       </button>
                     </div>
                   </motion.div>
@@ -705,18 +719,34 @@ export default function FreeOfferForm() {
                             <span className="text-[#00723c]/40 text-[11px] uppercase tracking-wider font-medium whitespace-nowrap">or reach us directly</span>
                             <div className="flex-1 h-px bg-[#00723c]/8" />
                           </div>
-                          <div className="flex gap-3">
-                            <a href="tel:18008001200" className="flex-1 flex items-center gap-3.5 h-14 px-5 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
-                              <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
+                          <div className="flex flex-col sm:flex-row gap-2.5">
+                            <a href="tel:18008001200" className="flex-1 flex sm:flex-col items-center sm:justify-center gap-4 sm:gap-2 px-5 py-3.5 sm:py-5 rounded-2xl bg-white border border-[#00723c]/12 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.99] transition-all duration-150 group">
+                              <span className="flex shrink-0 items-center justify-center w-10 h-10 rounded-full bg-[#effae9] group-hover:bg-[#97e674]/30 transition-colors duration-150">
+                                <svg width="16" height="16" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
                               </span>
-                              <div className="flex flex-col"><span className="font-semibold text-[14px] leading-tight">Call to Order</span><span className="text-[#00723c]/60 text-[12px]">1-800-800-1200 · Mon–Sun 6am–6pm PT</span></div>
+                              <div className="flex flex-col sm:items-center min-w-0 flex-1 sm:flex-none">
+                                <span className="font-semibold text-[14px] leading-tight">Call to Order</span>
+                                <span className="text-[#00723c]/60 text-[13px] leading-tight">1-800-800-1200</span>
+                                <span className="hidden sm:block text-[11px] text-[#00723c]/40 mt-0.5">Mon–Sun, 6am–6pm PT</span>
+                              </div>
+                              <span className="sm:hidden ml-auto shrink-0 text-[11px] font-medium text-[#00723c]/40 bg-[#f5fbf2] border border-[#00723c]/10 rounded-lg px-2.5 py-1 whitespace-nowrap">Mon–Sun 6am–6pm PT</span>
                             </a>
-                            <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex items-center gap-3.5 h-14 px-5 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
-                              <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="#00723c"/></svg>
+                            <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex sm:flex-col items-center sm:justify-center gap-4 sm:gap-2 px-5 py-3.5 sm:py-5 w-full rounded-2xl bg-white border border-[#00723c]/12 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.99] transition-all duration-150 group">
+                              <span className="flex shrink-0 items-center justify-center w-10 h-10 rounded-full bg-[#effae9] group-hover:bg-[#97e674]/30 transition-colors duration-150">
+                                <svg width="16" height="16" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1C3.9 1 1 3.6 1 6.8C1 8.4 1.7 9.9 2.9 10.9L2.5 13.5L5.3 12.1C6 12.3 6.7 12.5 7.5 12.5C11.1 12.5 14 9.9 14 6.8C14 3.6 11.1 1 7.5 1Z" fill="#00723c"/></svg>
                               </span>
-                              <div className="flex flex-col items-start"><span className="font-semibold text-[14px] leading-tight">Live Chat</span><span className="text-[#00723c]/50 text-[12px]">Typically replies instantly</span></div>
+                              <div className="flex flex-col sm:items-center items-start min-w-0 flex-1 sm:flex-none">
+                                <span className="font-semibold text-[14px] leading-tight">Live Chat</span>
+                                <span className="text-[#00723c]/50 text-[13px] leading-tight">Typically replies instantly</span>
+                                <span className="hidden sm:flex items-center gap-1.5 mt-0.5">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] animate-pulse" />
+                                  <span className="text-[11px] text-[#00723c]/40 font-medium">Online now</span>
+                                </span>
+                              </div>
+                              <span className="sm:hidden ml-auto shrink-0 flex items-center gap-1.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#97e674] animate-pulse" />
+                                <span className="text-[11px] font-medium text-[#00723c]/40">Online</span>
+                              </span>
                             </button>
                           </div>
                         </motion.div>
