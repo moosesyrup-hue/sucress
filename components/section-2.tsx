@@ -54,7 +54,7 @@ export default function Section2() {
               {/* Thumbnail */}
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[1360/755]">
                 <Image
-                  src="/images/video-thumbnail.png"
+                  src="/images/video-thumbnail-v2.png"
                   alt="Andrew Lessman talks about Sucress — click to play"
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
@@ -188,7 +188,7 @@ export default function Section2() {
 
             <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.6)]">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1"
+                src="https://player.vimeo.com/video/1183775197?autoplay=1&title=0&byline=0&portrait=0"
                 title="Andrew Lessman talks about Sucress"
                 allow="autoplay; encrypted-media; fullscreen"
                 allowFullScreen
