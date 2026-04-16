@@ -636,13 +636,13 @@ export default function FreeOfferForm() {
                               <div className="flex flex-col gap-1.5">
                                 <label htmlFor="state" className={labelClass}>State</label>
                                 <div className="relative">
-                                  <select id="state" name="state" required value={form.state} onChange={handleChange} className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none">
+                                  <select id="state" name="state" required value={form.state} onChange={handleChange} className="h-12 pl-4 pr-12 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none">
                                     <option value="" disabled>State</option>
                                     {US_STATES.map(([abbr, name]) => (
                                       <option key={abbr} value={abbr}>{abbr} — {name}</option>
                                     ))}
                                   </select>
-                                  <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                                  <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
                                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1L7 7L13 1" stroke="#00723c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                   </div>
                                 </div>
@@ -671,7 +671,7 @@ export default function FreeOfferForm() {
                               <select
                                 id="hearAbout" name="hearAbout" required
                                 value={form.hearAbout} onChange={handleChange}
-                                className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none"
+                                className="h-12 pl-4 pr-12 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none"
                               >
                                 <option value="" disabled>Select one…</option>
                                 <option value="radio">Radio</option>
@@ -682,7 +682,7 @@ export default function FreeOfferForm() {
                                 <option value="friend">Friend</option>
                                 <option value="other">Other</option>
                               </select>
-                              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1L7 7L13 1" stroke="#00723c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
                               </div>
                             </div>
