@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--
+  SUCRESS — REDEMPTION EMAIL
+  Built from Figma: GpP6CzlJDrHMCUazrFo3Ug / node 3778:20081 (390px mobile design)
+  ─────────────────────────────────────────────────────────────────────────────
+  KLAVIYO: Images hosted on Klaviyo CDN (d3k81ch9hvuctc.cloudfront.net).
+  Staging account: ProCaps Labs Staging.
+  Variables: {{ first_name }},
+             {{ event.shipping_address }}, {{ unsubscribe_url }}
+  ─────────────────────────────────────────────────────────────────────────────
+-->
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Your Sucress is on its way!</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    a { text-decoration: none; }
+    body { margin: 0; padding: 0; background-color: #f5f8f3; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+    /* ── Mobile — matches Figma 390px frame ── */
+    @media screen and (max-width: 620px) {
+      .outer-pad  { padding: 0 !important; }
+      .email-card { width: 100% !important; }
+      .hero-h1    { font-size: 36px !important; letter-spacing: -1.5px !important; }
+      .ep         { padding-left: 20px !important; padding-right: 20px !important; }
+      .mint-pad   { padding-left: 24px !important; padding-right: 24px !important; }
+      /* contact cards stay side by side at all sizes — matches Figma 390px layout */
+    }
+  </style>
+</head>
+
+<body style="margin:0;padding:0;background-color:#f5f8f3;">
+
+  <!-- Preheader -->
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#f5f8f3;visibility:hidden;">
+    Your free 14-day supply is confirmed and on its way — here's what makes Sucress different.
+    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f5f8f3;">
+    <tr>
+      <td class="outer-pad" align="center" style="padding:0 0 40px;">
+
+        <!-- ══════════════════════════════════════════════════
+             EMAIL CARD — max 600px, matches 390px Figma design
+        ═══════════════════════════════════════════════════ -->
+        <table class="email-card" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+          style="max-width:600px;width:100%;background-color:#ffffff;overflow:hidden;
+                 box-shadow:0 2px 32px rgba(0,114,60,0.03),0 1px 4px rgba(0,114,60,0.02);">
+
+          <!-- ── TOP BAR ── -->
+          <tr>
+            <td style="height:4px;background-color:#7dc45e;font-size:0;line-height:0;padding:0;">&nbsp;</td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               HEADER — Sucress logo
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:22px 40px 18px;background:#ffffff;text-align:center;">
+              <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/a09b94db-0fd8-40ef-a30c-99bd3e376a40.png" alt="Sucress" width="150"
+                   style="width:150px;height:auto;display:inline-block;">
+            </td>
+          </tr>
+          <tr>
+            <td class="ep" style="padding:0 40px;background:#ffffff;font-size:0;line-height:0;">
+              <div style="height:1px;background-color:rgba(0,114,60,0.09);">&nbsp;</div>
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               HERO — Badge + headline + welcome
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:40px 40px 28px;background:#ffffff;">
+
+              <!-- Order Confirmed badge — vertically centered -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                <tr>
+                  <td style="background-color:#91e06e;border-radius:30px;padding:9px 16px 9px 12px;vertical-align:middle;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding-right:7px;vertical-align:middle;line-height:0;">
+                          <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/0dbc11bd-be0b-4a42-93ab-9cea670d526c.png"
+                               alt="" width="14" height="14" style="display:block;">
+                        </td>
+                        <td style="vertical-align:middle;">
+                          <span style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                       font-size:14px;font-weight:600;color:#00723c;
+                                       letter-spacing:-0.28px;white-space:nowrap;
+                                       display:block;line-height:14px;">
+                            Order Confirmed
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Headline — Inter Medium 44px, "Hi name," lighter green, rest dark green -->
+              <div class="hero-h1"
+                style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                       font-weight:500;font-size:44px;line-height:1.3;
+                       letter-spacing:-2px;margin-bottom:20px;">
+                <span style="color:#7dc45e;">Hi {{ first_name }},</span><br>
+                <span style="color:#00723c;">your Sucress<br>is on its way!</span>
+              </div>
+
+              <!-- Accent rule — 44px, matches Figma -->
+              <div style="width:44px;height:2px;background-color:#00723c;border-radius:1px;margin-bottom:22px;"></div>
+
+              <!-- Welcome text — Inter Regular 16px -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:16px;line-height:1.6;letter-spacing:-0.32px;
+                        color:#00723c;margin:0;">
+                Welcome to ProCaps. <span style="font-weight:600;">Your FREE 2-week supply is confirmed.</span> We wanted to share a bit about what makes it different.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               HERO IMAGE — 20px side margins matching Figma
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:0 40px 32px;background:#ffffff;font-size:0;line-height:0;">
+              <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/b898bbd3-6084-4cbf-a0ae-58dab46d345a.png"
+                   alt="Sucress — the only truly sugar-free sweetener"
+                   width="350"
+                   style="width:100%;height:auto;display:block;border-radius:20px;">
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               COPY PANEL — mint bg, "Something worth knowing"
+               + pull quote + full body copy
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:0 40px;background-color:#ffffff;">
+
+              <!-- Mint box — inset with 20px margins + rounded corners, matching Figma -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                style="background-color:#effae9;border-radius:20px;overflow:hidden;">
+                <tr>
+                  <td class="mint-pad" style="padding:32px 36px;">
+
+                    <!-- "Something worth knowing" label — Inter SemiBold 16px -->
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                              font-size:16px;font-weight:600;line-height:1.6;
+                              letter-spacing:-0.32px;color:#00723c;margin:0 0 16px;">
+                      Something worth knowing
+                    </p>
+
+                    <!-- Pull quote — STIX Two Text Regular 20px with left bar -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+                      <tr>
+                        <td width="3" style="background-color:#91e06e;border-radius:2px;vertical-align:top;">&nbsp;</td>
+                        <td style="padding-left:16px;">
+                          <p style="font-family:Georgia,'Times New Roman',serif;
+                                     font-size:20px;line-height:1.3;letter-spacing:-0.5px;
+                                     color:#00723c;margin:0;font-weight:400;">
+                            &ldquo;Products labeled &lsquo;sugar-free&rsquo; can still contain small amounts of sugar or carbohydrates and legally be called &lsquo;zero&rsquo;.&rdquo;
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Body copy -->
+                    <div style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                font-size:16px;line-height:1.6;letter-spacing:-0.32px;color:#00723c;">
+                      <p style="margin:0;">
+                        <strong style="font-weight:600;">Sucress is different.</strong>
+                      </p>
+                      <p style="margin:16px 0;">
+                        No sugar. No carbohydrates. No unnecessary ingredients. Just a clean, consistent way to replace sugar in your everyday routine.
+                      </p>
+                      <p style="margin:0 0 16px;">
+                        That focus on purity and simplicity is represented in everything we make. ProCaps was founded in 1979 on a straightforward idea: follow the science, remove what doesn't belong, and maintain complete control over quality.
+                      </p>
+                      <p style="margin:0 0 12px;">
+                        <strong style="font-weight:600;">That means:</strong>
+                      </p>
+                      <ul style="margin:0 0 16px;padding-left:24px;">
+                        <li style="margin-bottom:8px;">We manufacture our products in our own <span style="font-weight:600;">fully solar-powered facility</span> in Henderson, Nevada</li>
+                        <li style="margin-bottom:8px;">We never use <span style="font-weight:600;">additives, fillers, or unnecessary ingredients</span></li>
+                        <li>Our formulations are based on <span style="font-weight:600;">science and how ingredients are actually absorbed</span> and used by the body</li>
+                      </ul>
+                      <p style="margin:0;">
+                        You'll see this approach in Sucress and across every product we offer.
+                      </p>
+                    </div>
+
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               CURIOUS SECTION — Inter Medium 30px heading + CTA
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:36px 40px 32px;background-color:#ffffff;">
+
+              <!-- Heading — Inter Medium 30px tracking -1.5px (matches Figma exactly) -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:30px;font-weight:500;line-height:1.3;
+                        letter-spacing:-1.5px;color:#00723c;margin:0 0 16px;">
+                Curious what else<br>we offer?
+              </p>
+
+              <!-- Body -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:16px;font-weight:400;line-height:1.6;
+                        letter-spacing:-0.32px;color:#00723c;margin:0 0 28px;">
+                Browse our full range organized by health benefit - energy, immunity, sleep, and more.
+              </p>
+
+              <!-- Bulletproof button — background on td for Gmail compatibility -->
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                href="https://www.procapslabs.com/healthbenefits/"
+                style="height:60px;v-text-anchor:middle;width:348px;"
+                arcsize="50%" strokecolor="#91e06e" fillcolor="#91e06e">
+                <w:anchorlock/>
+                <center style="color:#064326;font-family:sans-serif;font-size:18px;font-weight:500;">
+                  Shop by Health Benefit
+                </center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td align="center" style="border-radius:30px;background-color:#91e06e;">
+                    <a href="https://www.procapslabs.com/healthbenefits/"
+                      style="display:block;padding:0 32px;color:#064326;
+                             font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                             font-size:18px;font-weight:500;line-height:60px;
+                             text-align:center;text-decoration:none;border-radius:30px;">
+                      Shop by Health Benefit
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <!--<![endif]-->
+
+            </td>
+          </tr>
+
+          <!-- ── Divider line ── -->
+          <tr>
+            <td class="ep" style="padding:4px 40px;">
+              <div style="height:1px;background-color:rgba(0,114,60,0.15);font-size:0;line-height:0;">&nbsp;</div>
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               QUESTIONS SECTION — heading + two cards + sign-off
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:28px 40px 32px;background-color:#ffffff;">
+
+              <!-- "Questions? We're here to help." — Inter Medium 30px -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:30px;font-weight:500;line-height:1.3;
+                        letter-spacing:-1.5px;color:#00723c;margin:0 0 24px;">
+                Questions?<br>We're here to help.
+              </p>
+
+              <!-- Two contact cards — 170px each, 10px gap (matching Figma) -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:32px;">
+                <tr>
+
+                  <!-- Phone card -->
+                  <td width="170" valign="top" style="padding-right:10px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                      style="background-color:#effae9;border-radius:20px;overflow:hidden;">
+                      <tr>
+                        <td style="padding:24px 16px;text-align:center;">
+
+                          <!-- Lime icon circle — 72px, table-centered -->
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 16px;">
+                            <tr>
+                              <td width="72" height="72" align="center" valign="middle"
+                                style="width:72px;height:72px;background-color:#91e06e;border-radius:36px;">
+                                <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/67719c6b-a8ca-407b-a7f0-bca3dc874014.png"
+                                     alt="" width="24" height="24" style="display:block;">
+                              </td>
+                            </tr>
+                          </table>
+
+                          <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                    font-size:16px;font-weight:600;line-height:1.6;
+                                    letter-spacing:-0.32px;color:#00723c;margin:0;">
+                            <a href="tel:18008001200" style="color:#00723c;text-decoration:none;">800-800-1200</a>
+                          </p>
+                          <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                    font-size:14px;font-weight:400;line-height:1.6;
+                                    color:#00723c;margin:0;">
+                            <a href="tel:18008001200" style="color:#00723c;text-decoration:none;-webkit-text-fill-color:#00723c;">Mon - Sun<br>6am - 6pm</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+
+                  <!-- Email card -->
+                  <td width="170" valign="top">
+                    <a href="#" style="display:block;text-decoration:none;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                        style="background-color:#effae9;border-radius:20px;overflow:hidden;">
+                        <tr>
+                          <td style="padding:24px 16px;text-align:center;">
+
+                            <!-- Lime icon circle — 72px, table-centered -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 16px;">
+                              <tr>
+                                <td width="72" height="72" align="center" valign="middle"
+                                  style="width:72px;height:72px;background-color:#91e06e;border-radius:36px;">
+                                  <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/b005e062-a3a9-4d14-88dd-0d6adb1e7f28.png"
+                                       alt="" width="24" height="24" style="display:block;">
+                                </td>
+                              </tr>
+                            </table>
+
+                            <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                      font-size:16px;font-weight:600;line-height:1.6;
+                                      letter-spacing:-0.32px;color:#00723c;margin:0;">
+                              Email Us
+                            </p>
+                            <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                                      font-size:14px;font-weight:400;line-height:1.6;
+                                      color:#00723c;margin:0;">
+                              Reply to<br>this email
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+
+                </tr>
+              </table>
+
+              <!-- Sign-off text — Inter Regular 16px, bold "Procaps Laboratories" -->
+              <div style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                          font-size:16px;font-weight:400;line-height:1.6;
+                          letter-spacing:-0.32px;color:#00723c;">
+                <p style="margin:0 0 16px;">
+                  If you have any questions — about Sucress, vitamins, or supplements — our team of vitamin specialists is here to help.
+                </p>
+                <p style="margin:0 0 16px;">
+                  Call us at the number above or simply reply to this email. And yes, you'll always reach a real person.
+                </p>
+                <p style="margin:0 0 4px;">In good health,</p>
+                <p style="margin:0;font-weight:700;">Procaps Laboratories</p>
+              </div>
+
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               ORDER SUMMARY — mint bg, product + shipping
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td class="ep" style="padding:24px 40px 32px;background-color:#effae9;">
+
+              <!-- "Order summary" — Inter Medium 32px tracking -1.5px -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:32px;font-weight:500;line-height:1.3;
+                        letter-spacing:-1.5px;color:#00723c;margin:0 0 24px;">
+                Order summary
+              </p>
+
+              <!-- Product row: image left, details right -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                <tr>
+
+                  <!-- Product image — 162px wide, #effae9 bg, rounded -->
+                  <td width="162" valign="top">
+                    <div style="width:162px;background-color:#ffffff;overflow:hidden;">
+                      <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/bd269c24-3777-4a40-bf68-f90f5aa1fee2.png"
+                           alt="Sucress" width="162"
+                           style="width:162px;height:auto;display:block;">
+                    </div>
+                  </td>
+
+                  <!-- Product details right of image -->
+                  <td valign="middle" style="padding-left:16px;">
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:16px;font-weight:600;line-height:1.6;
+                               letter-spacing:-0.32px;color:#00723c;margin:0;">
+                      Sucress Non-Caloric Sweetener
+                    </p>
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:16px;font-weight:400;line-height:1.6;
+                               letter-spacing:-0.32px;color:#00723c;margin:0;">
+                      14-Day Free Supply
+                    </p>
+                  </td>
+
+                </tr>
+              </table>
+
+              <!-- "14 Packets • Free Shipping" — Inter Medium 12px uppercase tracking 0.96px -->
+              <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                        font-size:12px;font-weight:500;line-height:1.6;
+                        letter-spacing:0.96px;text-transform:uppercase;
+                        color:#00723c;text-align:center;margin:0 0 20px;">
+                14 Packets &nbsp;&nbsp;&bull;&nbsp;&nbsp; Free Shipping
+              </p>
+
+              <!-- Divider -->
+              <div style="height:1px;background-color:rgba(0,114,60,0.15);margin-bottom:20px;font-size:0;line-height:0;">&nbsp;</div>
+
+              <!-- Shipping address -->
+              <div style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                          font-size:16px;line-height:1.6;letter-spacing:-0.32px;
+                          color:#00723c;margin-bottom:28px;">
+                <p style="font-weight:600;margin:0;">Shipping address</p>
+                <p style="font-weight:400;margin:0;">{{ event.shipping_address|default:"—" }}</p>
+              </div>
+
+              <!-- Bulletproof button — background on td for Gmail compatibility -->
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                href="https://www.procapslabs.com"
+                style="height:60px;v-text-anchor:middle;width:348px;"
+                arcsize="50%" strokecolor="#91e06e" fillcolor="#91e06e">
+                <w:anchorlock/>
+                <center style="color:#064326;font-family:sans-serif;font-size:18px;font-weight:500;">
+                  Visit ProCapsLabs.com
+                </center>
+              </v:roundrect>
+              <![endif]-->
+              <!--[if !mso]><!-->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td align="center" style="border-radius:30px;background-color:#91e06e;">
+                    <a href="https://www.procapslabs.com"
+                      style="display:block;padding:0 32px;color:#064326;
+                             font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                             font-size:18px;font-weight:500;line-height:60px;
+                             text-align:center;text-decoration:none;border-radius:30px;">
+                      Visit ProCapsLabs.com
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <!--<![endif]-->
+
+            </td>
+          </tr>
+
+          <!-- ════════════════════════════════════════════════
+               FOOTER — dark green, matches Figma exactly
+               "Uncompromising. Since 1979." / ProCaps logo /
+               Solar / Address / Social icons / Legal
+          ════════════════════════════════════════════════ -->
+          <tr>
+            <td style="background-color:#00723c;padding:0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                <!-- "Uncompromising. Since 1979." — STIX Two Text 32px white -->
+                <tr>
+                  <td class="ep" style="padding:44px 40px 0;text-align:center;">
+                    <p style="font-family:Georgia,'Times New Roman',serif;
+                               font-size:32px;font-weight:400;line-height:1.3;
+                               letter-spacing:-1.5px;color:#ffffff;margin:0;">
+                      Uncompromising.<br>
+                      <em style="font-style:italic;">Since 1979.</em>
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- ProCaps full logo — 124.5px matching Figma -->
+                <tr>
+                  <td class="ep" style="padding:28px 40px 0;text-align:center;">
+                    <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/e98b558e-6842-45eb-bf78-ec8859850abb.png"
+                         alt="Andrew Lessman — ProCaps Laboratories"
+                         width="124"
+                         style="width:124px;height:auto;display:inline-block;">
+                  </td>
+                </tr>
+
+                <!-- Solar-Powered — Inter SemiBold 14px tracking 0.28px white -->
+                <tr>
+                  <td class="ep" style="padding:20px 40px 0;text-align:center;">
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:14px;font-weight:600;line-height:1.5;
+                               letter-spacing:0.28px;color:#ffffff;margin:0 0 6px;">
+                      100% Solar-Powered &bull; Zero Carbon Footprint
+                    </p>
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:14px;font-weight:400;line-height:1.5;
+                               color:rgba(255,255,255,0.45);margin:0;">
+                      430 Parkson Road Henderson, NV 89011<br>
+                      800-800-1200
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Social icons — 44px circles, 24px gap, matching Figma -->
+                <tr>
+                  <td class="ep" style="padding:24px 40px 0;text-align:center;">
+                    <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:0 12px;">
+                          <a href="#" aria-label="Facebook" style="text-decoration:none;display:block;">
+                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/ea023962-5528-4d31-adb0-226ab467b0be.png"
+                                 alt="Facebook" width="44" height="44" style="display:block;">
+                          </a>
+                        </td>
+                        <td style="padding:0 12px;">
+                          <a href="#" aria-label="Instagram" style="text-decoration:none;display:block;">
+                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/0c1338b7-9d7c-456b-83c0-9e09276922ba.png"
+                                 alt="Instagram" width="44" height="44" style="display:block;">
+                          </a>
+                        </td>
+                        <td style="padding:0 12px;">
+                          <a href="#" aria-label="YouTube" style="text-decoration:none;display:block;">
+                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/Rwaym5/images/c58dbe5b-999c-4a8a-9100-6ecfd7fdf393.png"
+                                 alt="YouTube" width="44" height="44" style="display:block;">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Rule -->
+                <tr>
+                  <td class="ep" style="padding:24px 40px 0;">
+                    <div style="height:1px;background-color:rgba(255,255,255,0.1);font-size:0;line-height:0;">&nbsp;</div>
+                  </td>
+                </tr>
+
+                <!-- Legal nav -->
+                <tr>
+                  <td class="ep" style="padding:16px 40px 4px;text-align:center;">
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:12px;color:rgba(255,255,255,0.3);margin:0;">
+                      <a href="https://www.procapslabs.com/privacy-policy" style="color:rgba(255,255,255,0.3);">Privacy Policy</a>
+                      &nbsp;&bull;&nbsp;
+                      <a href="https://www.procapslabs.com/terms" style="color:rgba(255,255,255,0.3);">Terms of Use</a>
+                      &nbsp;&bull;&nbsp;
+                      <a href="{{ unsubscribe_url }}" style="color:rgba(255,255,255,0.3);">Unsubscribe</a>
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Copyright -->
+                <tr>
+                  <td class="ep" style="padding:4px 40px 16px;text-align:center;">
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:11px;color:rgba(255,255,255,0.2);margin:0;">
+                      &copy; 2025 ProCaps Laboratories, Inc. All rights reserved.
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- FDA disclaimer -->
+                <tr>
+                  <td class="ep" style="padding:14px 40px 24px;border-top:1px solid rgba(255,255,255,0.08);">
+                    <p style="font-family:'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
+                               font-size:11px;line-height:1.7;color:rgba(255,255,255,0.22);
+                               margin:0;text-align:center;">
+                      These statements have not been evaluated by the Food and Drug Administration.
+                      These products are not intended to diagnose, treat, cure or prevent any disease.
+                    </p>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Email Card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

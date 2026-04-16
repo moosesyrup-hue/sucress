@@ -91,6 +91,7 @@ export default function ContactWidget() {
                 <div className="flex flex-col">
                   <span className="text-[#00723c] font-semibold text-[13px] leading-tight">Call to Order</span>
                   <span className="text-[#00723c]/60 text-[11px] tracking-tight">1-800-800-1200</span>
+                  <span className="text-[#00723c]/40 text-[10px] tracking-tight">Mon–Sun, 6am–6pm PT</span>
                 </div>
               </a>
 

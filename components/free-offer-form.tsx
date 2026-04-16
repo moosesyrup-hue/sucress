@@ -88,6 +88,7 @@ export default function FreeOfferForm() {
     firstName: "", lastName: "", email: "",
     address: "", city: "", state: "", zip: "",
     password: "", confirmPassword: "",
+    hearAbout: "",
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
@@ -119,8 +120,8 @@ export default function FreeOfferForm() {
   // Step 1 Continue — validate, check if needed, then advance
   const handleContinue = useCallback(async () => {
     setContinueError("");
-    const { firstName, lastName, email, address, city, state, zip } = form;
-    if (!firstName || !lastName || !email || !address || !city || !state || !zip) {
+    const { firstName, lastName, email, address, city, state, zip, hearAbout } = form;
+    if (!firstName || !lastName || !email || !address || !city || !state || !zip || !hearAbout) {
       setContinueError("Please fill in all fields before continuing.");
       return;
     }
@@ -502,7 +503,7 @@ export default function FreeOfferForm() {
                         <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
                         <div className="flex flex-col">
                           <span className="font-semibold text-[13px] leading-tight">Call Us</span>
-                          <span className="text-[#00723c]/50 text-[11px]">1-800-800-1200</span>
+                          <span className="text-[#00723c]/50 text-[11px]">Mon–Sun, 6am–6pm PT</span>
                         </div>
                       </a>
                       <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex items-center gap-2.5 h-14 px-4 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
@@ -649,6 +650,30 @@ export default function FreeOfferForm() {
                             </div>
                           </div>
 
+                          {/* Where did you hear about us */}
+                          <div className="flex flex-col gap-1.5">
+                            <label htmlFor="hearAbout" className={labelClass}>Where did you hear about us?</label>
+                            <div className="relative">
+                              <select
+                                id="hearAbout" name="hearAbout" required
+                                value={form.hearAbout} onChange={handleChange}
+                                className="h-12 pl-4 pr-10 rounded-xl border-2 border-[#00723c]/15 text-[#00723c] text-base focus:outline-none focus:border-[#97e674] transition-colors bg-[#fafdf8] w-full appearance-none"
+                              >
+                                <option value="" disabled>Select one…</option>
+                                <option value="radio">Radio</option>
+                                <option value="tv_streaming">TV / Streaming</option>
+                                <option value="social_media">Social Media</option>
+                                <option value="google">Google</option>
+                                <option value="podcast">Podcast</option>
+                                <option value="friend">Friend</option>
+                                <option value="other">Other</option>
+                              </select>
+                              <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1L7 7L13 1" stroke="#00723c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                              </div>
+                            </div>
+                          </div>
+
                           <div className="flex-1" />
 
                           {continueError && (
@@ -685,7 +710,7 @@ export default function FreeOfferForm() {
                               <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M13.5 10.5C12.5 10.5 11.5 10.3 10.6 9.9C10.3 9.8 9.9 9.9 9.7 10.1L8.6 11.6C6.5 10.5 4.5 8.6 3.4 6.4L4.9 5.3C5.1 5.1 5.2 4.7 5.1 4.4C4.7 3.5 4.5 2.5 4.5 1.5C4.5 1.2 4.3 1 4 1H1.5C1.2 1 1 1.2 1 1.5C1 8.4 6.6 14 13.5 14C13.8 14 14 13.8 14 13.5V11C14 10.7 13.8 10.5 13.5 10.5Z" fill="#00723c"/></svg>
                               </span>
-                              <div className="flex flex-col"><span className="font-semibold text-[14px] leading-tight">Call to Order</span><span className="text-[#00723c]/60 text-[12px]">1-800-800-1200</span></div>
+                              <div className="flex flex-col"><span className="font-semibold text-[14px] leading-tight">Call to Order</span><span className="text-[#00723c]/60 text-[12px]">1-800-800-1200 · Mon–Sun 6am–6pm PT</span></div>
                             </a>
                             <button type="button" onClick={() => { if (typeof window !== "undefined" && (window as any).Intercom) { (window as any).Intercom("show"); } }} className="flex-1 flex items-center gap-3.5 h-14 px-5 rounded-2xl bg-white border border-[#00723c]/15 text-[#00723c] hover:bg-[#effae9] hover:border-[#00723c]/25 active:scale-[0.98] transition-all duration-150">
                               <span className="flex shrink-0 items-center justify-center w-9 h-9 rounded-full bg-[#00723c]/8">
