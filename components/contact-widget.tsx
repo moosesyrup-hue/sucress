@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function ContactWidget() {
   const [visible, setVisible] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => typeof window !== "undefined" && window.innerWidth < 640);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 3000);
