@@ -27,7 +27,7 @@ const marcellus = Marcellus({
 export const metadata: Metadata = {
   title: "Sucress — Get Your Free 14-Packet Supply",
   description:
-    "Try Sucress FREE — the only sugar replacement that's truly sugar-free. Made with glycine and non-GMO stevia. No credit card required. No subscription. Free shipping.",
+    "Try Sucress FREE — a true zero calorie sweetener that's actually sugar-free. Made with glycine and non-GMO stevia. No credit card. No subscription. Free shipping.",
   openGraph: {
     title: "Sucress — Get Your Free 14-Packet Supply",
     description:

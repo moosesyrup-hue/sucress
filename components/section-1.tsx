@@ -43,8 +43,10 @@ export default function Section1() {
               </h2>
               <p className="font-normal text-[#00723c] text-[16px] md:text-[18px] lg:text-[20px] leading-relaxed opacity-85">
                 Made with glycine—an important amino acid and building block of
-                protein—combined with stevia. Sucress delivers clean, balanced
-                sweetness without calories, sugar, carbs or compromise.
+                protein—combined with stevia sweetener. Sucress delivers clean,
+                balanced sweetness without calories, sugar, carbs or compromise,
+                making it a true zero calorie sweetener and one of the most
+                advanced sugar alternatives available today.
               </p>
             </motion.div>
 

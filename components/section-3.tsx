@@ -53,10 +53,14 @@ export default function Section3() {
             viewport={viewport}
             transition={{ duration: 0.7, ease }}
           >
-            Our amino-acid based, non-GMO stevia leaf sweetener contains NO
-            HIDDEN SUGAR. Each packet delivers the sweetness of approximately
-            two teaspoons of sugar, plus the healthy blood sugar support of the
-            amino acid glycine.
+            Our amino acid based non-GMO stevia leaf extract formula is a true
+            low glycemic sugar substitute that contains NO HIDDEN SUGAR. Each
+            packet provides the sweetness equivalence of approximately 2
+            teaspoons of sugar, delivering the benefits of a pure stevia
+            extract without the bitterness or compromise, along with the
+            healthy blood sugar support of the amino acid glycine, making it
+            an ideal zero calorie sweetener for those seeking balanced
+            nutrition.
           </motion.p>
           <motion.a
             href="#free-offer"

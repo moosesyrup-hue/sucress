@@ -51,9 +51,13 @@ export default function Section6() {
               nowhere more deceptively than in those pretty colored sugar
               replacement packets.{" "}
             </strong>
-            <em className="italic">Sucress</em>{" "}is different. Just glycine and
-            non-GMO stevia leaf extract for clean, simple sweetness without the
-            extras you don&apos;t need.
+            <em className="italic">
+              Sucress is different. Just glycine and non-GMO stevia leaf
+              extract for clean, simple sweetness. A smarter sugar substitute
+              and cleaner alternative to conventional sugar alternatives—without
+              the extras you don&apos;t need, and a truly simple zero calorie
+              sweetener.
+            </em>
           </motion.p>
 
           <motion.a

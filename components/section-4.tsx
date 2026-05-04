@@ -99,13 +99,16 @@ export default function Section4() {
           >
             The perfectly balanced sweetness of{" "}
             <strong className="font-semibold">Sucress</strong> starts with
-            glycine — Mother Nature&apos;s sweetest amino acid. Glycine is a
+            Glycine – Mother Nature&apos;s sweetest amino acid. Glycine is a
             building block of protein given its name almost 200 years ago
             precisely because of its remarkably sweet taste. Today, we know that
-            glycine also supports healthy blood sugar balance making it truly the
-            most perfect natural sweetener. We then add just a trace of our most
-            concentrated stevia leaf extract to create nature&apos;s most
-            delicious, healthy and unique natural sweetener and sugar substitute.
+            Glycine also supports healthy blood sugar balance making it ideal
+            in a next-generation sugar substitute.
+            <br /><br />
+            We then add just a trace of our most concentrated stevia leaf
+            extract to create a clean, great-tasting stevia sweetener a truly
+            unique and effective stevia sugar substitute and one of the most
+            innovative sugar alternatives available.
           </motion.p>
 
           <motion.a
